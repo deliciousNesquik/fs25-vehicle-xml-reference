@@ -1,5 +1,9 @@
 site_name: FS25 Vehicle XML Reference
 site_description: Справочник по XML техники и оборудования Farming Simulator 25.
+site_url: https://deliciousnesquik.github.io/fs25-vehicle-xml-reference/
+
+repo_url: https://github.com/deliciousNesquik/fs25-vehicle-xml-reference
+repo_name: deliciousNesquik/fs25-vehicle-xml-reference
 
 theme:
   name: material
