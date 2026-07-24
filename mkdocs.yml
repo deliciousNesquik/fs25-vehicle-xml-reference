@@ -42,5 +42,6 @@ nav:
       - schemaOverlay: base/schema-overlay.md
       - mapHotspot: base/map-hotspot.md
       - components: base/components.md
+      - i3dMappings: base/i3d-mappings.md
   # - Specializations:
   # - Concepts:

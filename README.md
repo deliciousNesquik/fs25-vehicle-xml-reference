@@ -30,6 +30,7 @@ docs/
 - [schemaOverlay](docs/base/schema-overlay.md) — силуэт в схеме навески.
 - [mapHotspot](docs/base/map-hotspot.md) — значок на карте.
 - [components](docs/base/components.md) — тела, шарниры, столкновения.
+- [i3dMappings](docs/base/i3d-mappings.md) — алиасы узлов i3d (ссылки на ноды по имени).
 
 _Разделы пополняются по мере добавления блоков._
 
