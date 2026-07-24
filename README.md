@@ -32,6 +32,9 @@ docs/
 - [components](docs/base/components.md) — тела, шарниры, столкновения.
 - [i3dMappings](docs/base/i3d-mappings.md) — алиасы узлов i3d (ссылки на ноды по имени).
 
+### Specializations — блоки по спецификациям
+- [foliageBending](docs/specializations/foliage-bending.md) — сгибание растительности вокруг техники.
+
 _Разделы пополняются по мере добавления блоков._
 
 ## Как читать

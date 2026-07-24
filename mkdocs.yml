@@ -43,5 +43,6 @@ nav:
       - mapHotspot: base/map-hotspot.md
       - components: base/components.md
       - i3dMappings: base/i3d-mappings.md
-  # - Specializations:
+  - Specializations:
+      - foliageBending: specializations/foliage-bending.md
   # - Concepts:
