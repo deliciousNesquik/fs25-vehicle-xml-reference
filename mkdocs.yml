@@ -35,6 +35,12 @@ markdown_extensions:
 nav:
   - Обзор: index.md
   - Base:
+      - typeDesc: base/type-desc.md
+      - filename: base/filename.md
+      - sounds: base/sounds.md
+      - size: base/size.md
+      - schemaOverlay: base/schema-overlay.md
+      - mapHotspot: base/map-hotspot.md
       - components: base/components.md
   # - Specializations:
   # - Concepts:

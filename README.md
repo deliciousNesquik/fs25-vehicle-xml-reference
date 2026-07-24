@@ -22,8 +22,14 @@ docs/
 
 ## Содержание
 
-### Base
-- [components](docs/base/components.md) — блок `<components>`: тела, шарниры, столкновения.
+### Base — общие блоки любой техники
+- [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
+- [filename](docs/base/filename.md) — путь к `.i3d` (3D-модель).
+- [sounds](docs/base/sounds.md) — ссылка на внешний файл звуков.
+- [size](docs/base/size.md) — габариты техники и смещения.
+- [schemaOverlay](docs/base/schema-overlay.md) — силуэт в схеме навески.
+- [mapHotspot](docs/base/map-hotspot.md) — значок на карте.
+- [components](docs/base/components.md) — тела, шарниры, столкновения.
 
 _Разделы пополняются по мере добавления блоков._
 
