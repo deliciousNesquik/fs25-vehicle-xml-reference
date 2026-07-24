@@ -6,6 +6,12 @@ XML-блоки с примерами. Только разметка, без ск
 ## Разделы
 
 - **Base** — общие блоки любой техники.
+    - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
+    - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
+    - [sounds](base/sounds.md) — ссылка на внешний файл звуков.
+    - [size](base/size.md) — габариты техники и смещения.
+    - [schemaOverlay](base/schema-overlay.md) — силуэт в схеме навески.
+    - [mapHotspot](base/map-hotspot.md) — значок на карте.
     - [components](base/components.md) — тела, шарниры, столкновения.
 - **Specializations** — блоки по спецификациям (пополняется).
 - **Concepts** — сквозные темы (пополняется).
