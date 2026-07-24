@@ -45,6 +45,7 @@ nav:
       - i3dMappings: base/i3d-mappings.md
   - Specializations:
       - ai: specializations/ai.md
+      - licensePlates: specializations/license-plates.md
       - foliageBending: specializations/foliage-bending.md
       - wearable: specializations/wearable.md
       - washable: specializations/washable.md

@@ -16,6 +16,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [i3dMappings](base/i3d-mappings.md) — алиасы узлов i3d (ссылки по имени).
 - **Specializations** — блоки по спецификациям.
     - [ai](specializations/ai.md) — настройки автопомощника (наёмного работника).
+    - [licensePlates](specializations/license-plates.md) — точки крепления номерных знаков.
     - [foliageBending](specializations/foliage-bending.md) — сгибание растительности вокруг техники.
     - [wearable](specializations/wearable.md) — износ техники.
     - [washable](specializations/washable.md) — загрязнение и мойка.
