@@ -17,6 +17,7 @@ XML-блоки с примерами. Только разметка, без ск
 - **Specializations** — блоки по спецификациям.
     - [ai](specializations/ai.md) — настройки автопомощника (наёмного работника).
     - [licensePlates](specializations/license-plates.md) — точки крепления номерных знаков.
+    - [powerTakeOffs](specializations/power-take-offs.md) — валы отбора мощности (ВОМ): выход и вход.
     - [foliageBending](specializations/foliage-bending.md) — сгибание растительности вокруг техники.
     - [wearable](specializations/wearable.md) — износ техники.
     - [washable](specializations/washable.md) — загрязнение и мойка.

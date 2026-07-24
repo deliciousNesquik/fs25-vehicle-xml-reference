@@ -35,6 +35,7 @@ docs/
 ### Specializations — блоки по спецификациям
 - [ai](docs/specializations/ai.md) — настройки автопомощника: габариты для навигатора, рулевые колёса, обнаружение препятствий, развороты.
 - [licensePlates](docs/specializations/license-plates.md) — точки крепления номерных знаков: узлы, тип, позиция, область размещения.
+- [powerTakeOffs](docs/specializations/power-take-offs.md) — валы отбора мощности (ВОМ): выход (трактор), вход (орудие), модель вала.
 - [foliageBending](docs/specializations/foliage-bending.md) — сгибание растительности вокруг техники.
 - [wearable](docs/specializations/wearable.md) — износ техники (влияет на стоимость и ремонт).
 - [washable](docs/specializations/washable.md) — загрязнение и мойка (визуал).

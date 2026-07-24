@@ -46,6 +46,7 @@ nav:
   - Specializations:
       - ai: specializations/ai.md
       - licensePlates: specializations/license-plates.md
+      - powerTakeOffs: specializations/power-take-offs.md
       - foliageBending: specializations/foliage-bending.md
       - wearable: specializations/wearable.md
       - washable: specializations/washable.md
