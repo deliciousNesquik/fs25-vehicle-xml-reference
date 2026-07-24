@@ -33,6 +33,7 @@ docs/
 - [i3dMappings](docs/base/i3d-mappings.md) — алиасы узлов i3d (ссылки на ноды по имени).
 
 ### Specializations — блоки по спецификациям
+- [ai](docs/specializations/ai.md) — настройки автопомощника: габариты для навигатора, рулевые колёса, обнаружение препятствий, развороты.
 - [foliageBending](docs/specializations/foliage-bending.md) — сгибание растительности вокруг техники.
 - [wearable](docs/specializations/wearable.md) — износ техники (влияет на стоимость и ремонт).
 - [washable](docs/specializations/washable.md) — загрязнение и мойка (визуал).

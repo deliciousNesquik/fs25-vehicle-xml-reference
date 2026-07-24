@@ -44,6 +44,7 @@ nav:
       - components: base/components.md
       - i3dMappings: base/i3d-mappings.md
   - Specializations:
+      - ai: specializations/ai.md
       - foliageBending: specializations/foliage-bending.md
       - wearable: specializations/wearable.md
       - washable: specializations/washable.md
