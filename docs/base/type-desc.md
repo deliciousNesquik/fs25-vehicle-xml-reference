@@ -23,8 +23,54 @@ vehicle.base.typeDesc — L10N_STRING, по умолчанию (в схеме) n
 
 ## 2. Значение: откуда берутся ключи
 
-- **Встроенные** `$l10n_typeDesc_*` (например `typeDesc_tractor`, `typeDesc_plow`, `typeDesc_cultivator`) — из локализации самой игры. В моде их писать не нужно, они уже определены.
+- **Встроенные** `$l10n_typeDesc_*` — из локализации самой игры. В моде их писать не нужно, они уже определены.
 - **Свои** ключи — объявляются в `modDesc.xml` в секции `<l10n>` и используются так же через `$l10n_<ключ>`.
+
+### Стандартные ключи `typeDesc_*`
+
+| Ключ | Значение (en) |
+|---|---|
+| `typeDesc_tractor` | tractor |
+| `typeDesc_mower` | mower |
+| `typeDesc_tedder` | tedder |
+| `typeDesc_windrower` | windrower |
+| `typeDesc_baler` | baler |
+| `typeDesc_baleLoader` | bale loader |
+| `typeDesc_baleWrapper` | round bale wrapper |
+| `typeDesc_cultivator` | cultivator |
+| `typeDesc_plow` (`typeDesc_plough`) | plow |
+| `typeDesc_seeder` | sower |
+| `typeDesc_planter` | planter |
+| `typeDesc_sprayer` | sprayer |
+| `typeDesc_fertilizerSpreader` | fertilizer spreader |
+| `typeDesc_manureSpreader` | manure spreader |
+| `typeDesc_manureBarrel` | slurry tanker |
+| `typeDesc_cutter` | header |
+| `typeDesc_cutterTrailer` | header trailer |
+| `typeDesc_cornCutter` | corn header |
+| `typeDesc_harvester` | harvester |
+| `typeDesc_forageWagon` | forage wagon |
+| `typeDesc_mixerWagon` | mixer wagon |
+| `typeDesc_augerWagon` | auger wagon |
+| `typeDesc_strawBlower` | straw blower |
+| `typeDesc_trailer` | trailer |
+| `typeDesc_tipper` | tipper |
+| `typeDesc_waterTrailer` | water trailer |
+| `typeDesc_timberTrailer` | timber trailer |
+| `typeDesc_lowLoader` | low loader |
+| `typeDesc_weight` | weight |
+| `typeDesc_pickup` | pickup |
+| `typeDesc_pallet` | pallet |
+| `typeDesc_haulmTopper` | topper |
+| `typeDesc_defoliator` | defoliator |
+| `typeDesc_forwarder` | forwarder |
+| `typeDesc_woodHarvester` | wood harvester |
+| `typeDesc_treePlanter` | tree planter |
+| `typeDesc_stumpCutter` | stump cutter |
+| `typeDesc_woodCrusher` | wood crusher |
+| `typeDesc_highPressureWasher` | high pressure washer |
+
+> Список — документированный набор встроенных ключей; ключи регистронезависимы. Он **не гарантированно полон для FS25** (мастер-список локализации лежит в зашифрованных данных игры). Если нужного нет — используй свой ключ через `modDesc.xml <l10n>`. Само поле `typeDesc` не ограничено этим набором: подойдёт любой `$l10n_`-ключ.
 
 ---
 
