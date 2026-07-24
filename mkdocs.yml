@@ -1,0 +1,36 @@
+site_name: FS25 Vehicle XML Reference
+site_description: Справочник по XML техники и оборудования Farming Simulator 25.
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Обзор: index.md
+  - Base:
+      - components: base/components.md
+  # - Specializations:
+  # - Concepts:
