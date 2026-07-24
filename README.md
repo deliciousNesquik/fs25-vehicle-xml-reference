@@ -34,6 +34,8 @@ docs/
 
 ### Specializations — блоки по спецификациям
 - [foliageBending](docs/specializations/foliage-bending.md) — сгибание растительности вокруг техники.
+- [wearable](docs/specializations/wearable.md) — износ техники (влияет на стоимость и ремонт).
+- [washable](docs/specializations/washable.md) — загрязнение и мойка (визуал).
 
 _Разделы пополняются по мере добавления блоков._
 
