@@ -21,7 +21,8 @@ XML-блоки с примерами. Только разметка, без ск
     - [isSelectable](mod-desc/is-selectable.md) — виден/выбираем ли мод в списке (по умолчанию да).
     - [uniqueType](mod-desc/unique-type.md) — тег взаимного исключения модов (один включённый на тег).
     - [vehicleTypes](mod-desc/vehicle-types.md) — кастомные типы техники (набор спек); пара к specializations.
-    - [placeableTypes / placeableSpecializations](mod-desc/placeable-types.md) — типы и спеки размещаемых объектов (класс `Placeable`).
+    - [placeableSpecializations](mod-desc/placeable-specializations.md) — регистрация кастомных спеков размещаемых объектов (класс `Placeable`).
+    - [placeableTypes](mod-desc/placeable-types.md) — кастомные типы размещаемых объектов (набор спек); пара к placeableSpecializations.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).

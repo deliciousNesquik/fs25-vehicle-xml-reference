@@ -50,7 +50,8 @@ nav:
       - isSelectable: mod-desc/is-selectable.md
       - uniqueType: mod-desc/unique-type.md
       - vehicleTypes: mod-desc/vehicle-types.md
-      - placeableTypes / placeableSpecializations: mod-desc/placeable-types.md
+      - placeableSpecializations: mod-desc/placeable-specializations.md
+      - placeableTypes: mod-desc/placeable-types.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
