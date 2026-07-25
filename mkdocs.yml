@@ -41,6 +41,7 @@ nav:
       - title: mod-desc/title.md
       - description: mod-desc/description.md
       - iconFilename: mod-desc/icon-filename.md
+      - multiplayer: mod-desc/multiplayer.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

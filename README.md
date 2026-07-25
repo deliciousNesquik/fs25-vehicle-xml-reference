@@ -29,6 +29,7 @@ docs/
 - [title](docs/mod-desc/title.md) — многоязычное название; закрытый набор из 27 языковых кодов, фолбэк на en.
 - [description](docs/mod-desc/description.md) — многоязычное описание; та же языковая модель, обычно CDATA.
 - [iconFilename](docs/mod-desc/icon-filename.md) — путь к иконке мода; DDS 512×512, BC1, без мипов (не путать со store-иконкой).
+- [multiplayer](docs/mod-desc/multiplayer.md) — `supported`/`only`; самодекларация MP-совместимости (движок не проверяет код).
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
