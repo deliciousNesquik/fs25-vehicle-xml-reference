@@ -37,6 +37,7 @@ nav:
   - modDesc:
       - Корень (descVersion): mod-desc/root.md
       - author (и соавторы): mod-desc/author.md
+      - version: mod-desc/version.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
