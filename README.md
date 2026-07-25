@@ -38,6 +38,7 @@ docs/
 - [isSelectable](docs/mod-desc/is-selectable.md) — виден/выбираем ли мод в меню (по умолчанию `true`); `false` — служебные/зависимые моды.
 - [uniqueType](docs/mod-desc/unique-type.md) — тег взаимоисключения: моды с одинаковым тегом нельзя включить вместе (диалог-своп).
 - [vehicleTypes](docs/mod-desc/vehicle-types.md) — кастомные типы техники: `parent` + `<specialization>`; ссылка через `type=` в vehicle.xml.
+- [placeableTypes / placeableSpecializations](docs/mod-desc/placeable-types.md) — типы и спеки размещаемых объектов; общий с техникой механизм, класс `Placeable`, `parent="simplePlaceable"`.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
