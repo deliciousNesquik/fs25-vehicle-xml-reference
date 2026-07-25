@@ -26,6 +26,7 @@ docs/
 - [Корень `<modDesc>` (descVersion)](docs/mod-desc/root.md) — атрибуты корневого тега.
 - [author](docs/mod-desc/author.md) — имя автора; указание соавторов (отдельного тега нет).
 - [version](docs/mod-desc/version.md) — версия мода; формат свободный (a.b.c.d — рекомендация), major/minor/patch.
+- [title](docs/mod-desc/title.md) — многоязычное название; закрытый набор из 27 языковых кодов, фолбэк на en.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
