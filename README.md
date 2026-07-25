@@ -43,6 +43,7 @@ docs/
 - [handToolSpecializations](docs/mod-desc/handtool-specializations.md) — регистрация спеков ручных инструментов (класс `HandTool`); механизм новый в FS25.
 - [handToolTypes](docs/mod-desc/handtool-types.md) — кастомные типы ручных инструментов: `parent` + `<specialization>`; корень `<handTool type=>`; 9 базовых спек.
 - [jointTypes](docs/mod-desc/joint-types.md) — типы сцепок навески: `<jointType name=>`; глобальный реестр (без неймспейса), стыковка по совпадению имени attacherJoint ↔ inputAttacherJoint.
+- [storeItems](docs/mod-desc/store-items.md) — товары мода в магазине: `<storeItem xmlFilename=>` ссылается на файл предмета; вся витрина — в `<storeData>` файла; вид по `<species>`.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

@@ -55,6 +55,7 @@ nav:
       - handToolSpecializations: mod-desc/handtool-specializations.md
       - handToolTypes: mod-desc/handtool-types.md
       - jointTypes: mod-desc/joint-types.md
+      - storeItems: mod-desc/store-items.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
