@@ -49,6 +49,7 @@ nav:
       - parentFile: mod-desc/parent-file.md
       - isSelectable: mod-desc/is-selectable.md
       - uniqueType: mod-desc/unique-type.md
+      - vehicleTypes: mod-desc/vehicle-types.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

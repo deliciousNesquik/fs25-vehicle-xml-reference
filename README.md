@@ -37,6 +37,7 @@ docs/
 - [parentFile](docs/mod-desc/parent-file.md) — наследование XML: `xmlFilename` родитель + `set`/`remove`/`clearList`; общий механизм движка (чаще в конфигах техники).
 - [isSelectable](docs/mod-desc/is-selectable.md) — виден/выбираем ли мод в меню (по умолчанию `true`); `false` — служебные/зависимые моды.
 - [uniqueType](docs/mod-desc/unique-type.md) — тег взаимоисключения: моды с одинаковым тегом нельзя включить вместе (диалог-своп).
+- [vehicleTypes](docs/mod-desc/vehicle-types.md) — кастомные типы техники: `parent` + `<specialization>`; ссылка через `type=` в vehicle.xml.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

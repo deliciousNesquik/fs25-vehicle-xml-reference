@@ -20,6 +20,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [parentFile](mod-desc/parent-file.md) — наследование XML: родитель как основа + правки (общий механизм движка).
     - [isSelectable](mod-desc/is-selectable.md) — виден/выбираем ли мод в списке (по умолчанию да).
     - [uniqueType](mod-desc/unique-type.md) — тег взаимного исключения модов (один включённый на тег).
+    - [vehicleTypes](mod-desc/vehicle-types.md) — кастомные типы техники (набор спек); пара к specializations.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
