@@ -15,6 +15,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [multiplayer](mod-desc/multiplayer.md) — флаг совместимости с MP (самодекларация, не проверка).
     - [l10n](mod-desc/l10n.md) — локализация: внешние файлы (filenamePrefix) или инлайн-переводы.
     - [specializations](mod-desc/specializations.md) — регистрация кастомных спеков (Lua) техники.
+    - [extraSourceFiles](mod-desc/extra-source-files.md) — подключение глобальных Lua-скриптов при загрузке мода.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
