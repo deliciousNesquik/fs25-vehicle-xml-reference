@@ -22,6 +22,9 @@ docs/
 
 ## Содержание
 
+### modDesc — описание мода
+- [Корень `<modDesc>` (descVersion)](docs/mod-desc/root.md) — атрибуты корневого тега.
+
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
 - [filename](docs/base/filename.md) — путь к `.i3d` (3D-модель).

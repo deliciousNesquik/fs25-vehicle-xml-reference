@@ -34,6 +34,8 @@ markdown_extensions:
 
 nav:
   - Обзор: index.md
+  - modDesc:
+      - Корень (descVersion): mod-desc/root.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
