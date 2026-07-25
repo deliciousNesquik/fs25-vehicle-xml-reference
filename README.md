@@ -30,6 +30,7 @@ docs/
 - [description](docs/mod-desc/description.md) — многоязычное описание; та же языковая модель, обычно CDATA.
 - [iconFilename](docs/mod-desc/icon-filename.md) — путь к иконке мода; DDS 512×512, BC1, без мипов (не путать со store-иконкой).
 - [multiplayer](docs/mod-desc/multiplayer.md) — `supported`/`only`; самодекларация MP-совместимости (движок не проверяет код).
+- [l10n](docs/mod-desc/l10n.md) — локализация: `filenamePrefix` (внешние файлы `l10n_<код>.xml`) или инлайн-`<text>`; `$l10n_`/getText, en-фолбэк.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

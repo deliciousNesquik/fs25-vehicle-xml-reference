@@ -13,6 +13,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [description](mod-desc/description.md) — многоязычное описание; та же языковая модель, CDATA.
     - [iconFilename](mod-desc/icon-filename.md) — путь к иконке мода (DDS 512×512, BC1).
     - [multiplayer](mod-desc/multiplayer.md) — флаг совместимости с MP (самодекларация, не проверка).
+    - [l10n](mod-desc/l10n.md) — локализация: внешние файлы (filenamePrefix) или инлайн-переводы.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
