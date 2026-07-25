@@ -46,6 +46,7 @@ nav:
       - specializations: mod-desc/specializations.md
       - extraSourceFiles: mod-desc/extra-source-files.md
       - dependencies: mod-desc/dependencies.md
+      - parentFile: mod-desc/parent-file.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

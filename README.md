@@ -34,6 +34,7 @@ docs/
 - [specializations](docs/mod-desc/specializations.md) — регистрация кастомных спеков техники: `name`/`className`/`filename`; неймспейс `<modName>.<name>`.
 - [extraSourceFiles](docs/mod-desc/extra-source-files.md) — глобальные Lua-скрипты (`sourceFile#filename`), грузятся при загрузке мода по порядку.
 - [dependencies](docs/mod-desc/dependencies.md) — требуемые моды (имя без `.zip`); проверка включённости, блокирует старт; НЕ порядок загрузки.
+- [parentFile](docs/mod-desc/parent-file.md) — наследование XML: `xmlFilename` родитель + `set`/`remove`/`clearList`; общий механизм движка (чаще в конфигах техники).
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
