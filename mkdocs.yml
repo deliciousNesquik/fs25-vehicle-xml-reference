@@ -54,6 +54,7 @@ nav:
       - placeableTypes: mod-desc/placeable-types.md
       - handToolSpecializations: mod-desc/handtool-specializations.md
       - handToolTypes: mod-desc/handtool-types.md
+      - jointTypes: mod-desc/joint-types.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

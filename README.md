@@ -42,6 +42,7 @@ docs/
 - [placeableTypes](docs/mod-desc/placeable-types.md) — кастомные типы размещаемых объектов: `parent="simplePlaceable"` + `<specialization>`; ссылка через `type=` в placeable.xml.
 - [handToolSpecializations](docs/mod-desc/handtool-specializations.md) — регистрация спеков ручных инструментов (класс `HandTool`); механизм новый в FS25.
 - [handToolTypes](docs/mod-desc/handtool-types.md) — кастомные типы ручных инструментов: `parent` + `<specialization>`; корень `<handTool type=>`; 9 базовых спек.
+- [jointTypes](docs/mod-desc/joint-types.md) — типы сцепок навески: `<jointType name=>`; глобальный реестр (без неймспейса), стыковка по совпадению имени attacherJoint ↔ inputAttacherJoint.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

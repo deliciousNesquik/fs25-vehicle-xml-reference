@@ -25,6 +25,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [placeableTypes](mod-desc/placeable-types.md) — кастомные типы размещаемых объектов (набор спек); пара к placeableSpecializations.
     - [handToolSpecializations](mod-desc/handtool-specializations.md) — регистрация спеков ручных инструментов (класс `HandTool`; механизм FS25).
     - [handToolTypes](mod-desc/handtool-types.md) — кастомные типы ручных инструментов (набор спек); пара к handToolSpecializations.
+    - [jointTypes](mod-desc/joint-types.md) — типы сцепок навески: глобальный реестр имён; стыковка attacherJoint ↔ inputAttacherJoint.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
