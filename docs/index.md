@@ -27,6 +27,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [handToolTypes](mod-desc/handtool-types.md) — кастомные типы ручных инструментов (набор спек); пара к handToolSpecializations.
     - [jointTypes](mod-desc/joint-types.md) — типы сцепок навески: глобальный реестр имён; стыковка attacherJoint ↔ inputAttacherJoint.
     - [storeItems](mod-desc/store-items.md) — товары мода в магазине: ссылки на XML предметов; данные магазина в `<storeData>` файла.
+    - [storeCategories](mod-desc/store-categories.md) — кастомные категории магазина (только DLC); `name`/`title`/`image`/`type`/`insertAfter`.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
