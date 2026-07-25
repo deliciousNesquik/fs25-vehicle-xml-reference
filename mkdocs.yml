@@ -40,6 +40,7 @@ nav:
       - version: mod-desc/version.md
       - title: mod-desc/title.md
       - description: mod-desc/description.md
+      - iconFilename: mod-desc/icon-filename.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

@@ -28,6 +28,7 @@ docs/
 - [version](docs/mod-desc/version.md) — версия мода; формат свободный (a.b.c.d — рекомендация), major/minor/patch.
 - [title](docs/mod-desc/title.md) — многоязычное название; закрытый набор из 27 языковых кодов, фолбэк на en.
 - [description](docs/mod-desc/description.md) — многоязычное описание; та же языковая модель, обычно CDATA.
+- [iconFilename](docs/mod-desc/icon-filename.md) — путь к иконке мода; DDS 512×512, BC1, без мипов (не путать со store-иконкой).
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
