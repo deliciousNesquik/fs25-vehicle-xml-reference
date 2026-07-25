@@ -40,6 +40,9 @@ docs/
 - [wearable](docs/specializations/wearable.md) — износ техники (влияет на стоимость и ремонт).
 - [washable](docs/specializations/washable.md) — загрязнение и мойка (визуал).
 
+### Concepts — сквозные темы
+- [Объявление XML](docs/concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла: version, encoding, standalone.
+
 _Разделы пополняются по мере добавления блоков._
 
 ## Как читать

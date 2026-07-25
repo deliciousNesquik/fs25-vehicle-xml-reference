@@ -21,6 +21,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [foliageBending](specializations/foliage-bending.md) — сгибание растительности вокруг техники.
     - [wearable](specializations/wearable.md) — износ техники.
     - [washable](specializations/washable.md) — загрязнение и мойка.
-- **Concepts** — сквозные темы (пополняется).
+- **Concepts** — сквозные темы.
+    - [Объявление XML](concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла.
 
 Лицензия: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

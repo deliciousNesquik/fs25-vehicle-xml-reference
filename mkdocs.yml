@@ -50,4 +50,5 @@ nav:
       - foliageBending: specializations/foliage-bending.md
       - wearable: specializations/wearable.md
       - washable: specializations/washable.md
-  # - Concepts:
+  - Concepts:
+      - Объявление XML: concepts/xml-declaration.md
