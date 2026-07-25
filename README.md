@@ -33,6 +33,7 @@ docs/
 - [l10n](docs/mod-desc/l10n.md) — локализация: `filenamePrefix` (внешние файлы `l10n_<код>.xml`) или инлайн-`<text>`; `$l10n_`/getText, en-фолбэк.
 - [specializations](docs/mod-desc/specializations.md) — регистрация кастомных спеков техники: `name`/`className`/`filename`; неймспейс `<modName>.<name>`.
 - [extraSourceFiles](docs/mod-desc/extra-source-files.md) — глобальные Lua-скрипты (`sourceFile#filename`), грузятся при загрузке мода по порядку.
+- [dependencies](docs/mod-desc/dependencies.md) — требуемые моды (имя без `.zip`); проверка включённости, блокирует старт; НЕ порядок загрузки.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
