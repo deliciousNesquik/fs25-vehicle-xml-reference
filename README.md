@@ -40,6 +40,8 @@ docs/
 - [vehicleTypes](docs/mod-desc/vehicle-types.md) — кастомные типы техники: `parent` + `<specialization>`; ссылка через `type=` в vehicle.xml.
 - [placeableSpecializations](docs/mod-desc/placeable-specializations.md) — регистрация кастомных спеков размещаемых объектов: `name`/`className`/`filename`; класс `Placeable`, общий с техникой механизм.
 - [placeableTypes](docs/mod-desc/placeable-types.md) — кастомные типы размещаемых объектов: `parent="simplePlaceable"` + `<specialization>`; ссылка через `type=` в placeable.xml.
+- [handToolSpecializations](docs/mod-desc/handtool-specializations.md) — регистрация спеков ручных инструментов (класс `HandTool`); механизм новый в FS25.
+- [handToolTypes](docs/mod-desc/handtool-types.md) — кастомные типы ручных инструментов: `parent` + `<specialization>`; корень `<handTool type=>`; 9 базовых спек.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
