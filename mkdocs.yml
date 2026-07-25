@@ -47,6 +47,7 @@ nav:
       - extraSourceFiles: mod-desc/extra-source-files.md
       - dependencies: mod-desc/dependencies.md
       - parentFile: mod-desc/parent-file.md
+      - isSelectable: mod-desc/is-selectable.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

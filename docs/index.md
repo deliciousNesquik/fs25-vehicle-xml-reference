@@ -18,6 +18,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [extraSourceFiles](mod-desc/extra-source-files.md) — подключение глобальных Lua-скриптов при загрузке мода.
     - [dependencies](mod-desc/dependencies.md) — требуемые моды (должны быть включены; не порядок загрузки).
     - [parentFile](mod-desc/parent-file.md) — наследование XML: родитель как основа + правки (общий механизм движка).
+    - [isSelectable](mod-desc/is-selectable.md) — виден/выбираем ли мод в списке (по умолчанию да).
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
