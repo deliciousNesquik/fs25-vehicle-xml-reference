@@ -36,6 +36,7 @@ docs/
 - [dependencies](docs/mod-desc/dependencies.md) — требуемые моды (имя без `.zip`); проверка включённости, блокирует старт; НЕ порядок загрузки.
 - [parentFile](docs/mod-desc/parent-file.md) — наследование XML: `xmlFilename` родитель + `set`/`remove`/`clearList`; общий механизм движка (чаще в конфигах техники).
 - [isSelectable](docs/mod-desc/is-selectable.md) — виден/выбираем ли мод в меню (по умолчанию `true`); `false` — служебные/зависимые моды.
+- [uniqueType](docs/mod-desc/unique-type.md) — тег взаимоисключения: моды с одинаковым тегом нельзя включить вместе (диалог-своп).
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

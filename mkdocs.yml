@@ -48,6 +48,7 @@ nav:
       - dependencies: mod-desc/dependencies.md
       - parentFile: mod-desc/parent-file.md
       - isSelectable: mod-desc/is-selectable.md
+      - uniqueType: mod-desc/unique-type.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
