@@ -39,6 +39,7 @@ nav:
       - author (и соавторы): mod-desc/author.md
       - version: mod-desc/version.md
       - title: mod-desc/title.md
+      - description: mod-desc/description.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
@@ -57,3 +58,4 @@ nav:
       - washable: specializations/washable.md
   - Concepts:
       - Объявление XML: concepts/xml-declaration.md
+      - CDATA: concepts/cdata.md

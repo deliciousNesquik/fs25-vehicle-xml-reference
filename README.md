@@ -27,6 +27,7 @@ docs/
 - [author](docs/mod-desc/author.md) — имя автора; указание соавторов (отдельного тега нет).
 - [version](docs/mod-desc/version.md) — версия мода; формат свободный (a.b.c.d — рекомендация), major/minor/patch.
 - [title](docs/mod-desc/title.md) — многоязычное название; закрытый набор из 27 языковых кодов, фолбэк на en.
+- [description](docs/mod-desc/description.md) — многоязычное описание; та же языковая модель, обычно CDATA.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
@@ -48,6 +49,7 @@ docs/
 
 ### Concepts — сквозные темы
 - [Объявление XML](docs/concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла: version, encoding, standalone.
+- [CDATA](docs/concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста (спецсимволы, многострочный текст).
 
 _Разделы пополняются по мере добавления блоков._
 

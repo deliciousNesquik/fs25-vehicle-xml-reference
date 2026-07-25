@@ -10,6 +10,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [author](mod-desc/author.md) — имя автора; как указывать соавторов (отдельного тега нет).
     - [version](mod-desc/version.md) — версия мода; формат не строгий, но конвенция полезна.
     - [title](mod-desc/title.md) — многоязычное название; закрытый набор из 27 языковых кодов.
+    - [description](mod-desc/description.md) — многоязычное описание; та же языковая модель, CDATA.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
@@ -28,5 +29,6 @@ XML-блоки с примерами. Только разметка, без ск
     - [washable](specializations/washable.md) — загрязнение и мойка.
 - **Concepts** — сквозные темы.
     - [Объявление XML](concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла.
+    - [CDATA](concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста.
 
 Лицензия: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
