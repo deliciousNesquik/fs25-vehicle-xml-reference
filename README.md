@@ -58,6 +58,7 @@ docs/
 - [maps](docs/mod-desc/maps.md) — играбельные карты: `<map id/configFilename/default{Vehicles,Placeables,Items,HandTools}XMLFilename/filename/className>` + `<title>`/`<description>`/`<iconFilename>`; регистрируется в g_mapManager, экран выбора карты; id неймспейсится, filename/className дефолт Mission00.
 - [materialHolders](docs/mod-desc/material-holders.md) — держатели материалов: `<materialHolder filename>` → i3d; грузится ради регистрации именованных материалов (onCreate-узлы) в g_materialManager; ссылка по имени/тройке; глобально, last-write-wins.
 - [consumables](docs/mod-desc/consumables.md) — расходники (FS25-only): `<consumable xmlFilename>` → файл вариаций (root `<consumable>`/`<consumableVariation type/name/price/…>`); надстройка над fillUnit (обмотка тюков), расход при работе + пополнение за деньги; g_consumableManager, вариации неймспейсятся.
+- [wildlife](docs/mod-desc/wildlife.md) — дикая фауна: `<wildlife><species filename>` (НЕ `<wildlife filename>`); амбиентные животные/птицы (WildlifeSpawner: companionAnimal/lightWildlife); modDesc-путь FS25-new (в FS22 — карта map.wildlife#filename); схема файла вида FS25 публично не подтверждена.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

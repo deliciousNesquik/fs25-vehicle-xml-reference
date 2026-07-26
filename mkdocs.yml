@@ -70,6 +70,7 @@ nav:
       - maps: mod-desc/maps.md
       - materialHolders: mod-desc/material-holders.md
       - consumables: mod-desc/consumables.md
+      - wildlife: mod-desc/wildlife.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

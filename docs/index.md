@@ -41,6 +41,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [maps](mod-desc/maps.md) — играбельные карты мода: `id`/`configFilename`/`default*`/`<title>`/`<iconFilename>`; появляются в выборе карты.
     - [materialHolders](mod-desc/material-holders.md) — держатели материалов: i3d, грузится ради регистрации именованных материалов в общий реестр.
     - [consumables](mod-desc/consumables.md) — расходники (FS25): плёнка/сетка обмотки; надстройка над fillUnit, вариации, расход+пополнение.
+    - [wildlife](mod-desc/wildlife.md) — дикая фауна (FS25 modDesc-путь): `<species filename>`; амбиентные животные/птицы (WildlifeSpawner).
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
