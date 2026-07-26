@@ -35,6 +35,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [helpLines](mod-desc/help-lines.md) — страницы помощи: `<category>`/`<page>`/`<paragraph>` во вкладке «Помощь»; дополняют базовые.
     - [densityMapHeightTypes](mod-desc/density-map-height-types.md) — типы насыпных материалов (кучи на земле); внешний файл, привязка к fillType; условие высыпания.
     - [materialTemplates](mod-desc/material-templates.md) — шаблоны материалов/цветов магазина (FS25): `colorScale` sRGB + PBR, наследование `parentTemplate`.
+    - [connectionHoses](mod-desc/connection-hoses.md) — типы шлангов трактор↔орудие: внешний файл (basicHoses/connectionHoseTypes/sockets); ссылка по имени.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).

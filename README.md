@@ -52,6 +52,7 @@ docs/
 - [helpLines](docs/mod-desc/help-lines.md) — страницы помощи: `<category>`→`<page>`→`<paragraph>` (`<title>`/`<text>`/`<image>`); во вкладке «Помощь», дополняют базовые, видны после загрузки карты.
 - [densityMapHeightTypes](docs/mod-desc/density-map-height-types.md) — типы насыпных материалов (кучи на земле): `<densityMapHeightTypes filename>` → внешний файл с `<densityMapHeightType fillTypeName …>`; глобально, условие `getCanTipToGround`.
 - [materialTemplates](docs/mod-desc/material-templates.md) — шаблоны материалов/цветов магазина (FS25): `<template name/title/colorScale/PBR/parentTemplate>`; ссылка `materialTemplateName` в конфигурациях цвета; имя мода неймспейсится.
+- [connectionHoses](docs/mod-desc/connection-hoses.md) — типы шлангов трактор↔орудие: `<connectionHose xmlFilename>` → внешний файл (`basicHoses`/`connectionHoseTypes`+adapter/material/`sockets`); техника ссылается по имени (`<hose>` орудие, `<target>` трактор).
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
