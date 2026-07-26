@@ -65,6 +65,7 @@ nav:
       - densityMapHeightTypes: mod-desc/density-map-height-types.md
       - materialTemplates: mod-desc/material-templates.md
       - connectionHoses: mod-desc/connection-hoses.md
+      - bales: mod-desc/bales.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
