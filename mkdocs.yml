@@ -62,6 +62,8 @@ nav:
       - inputBinding: mod-desc/input-binding.md
       - fillTypes: mod-desc/fill-types.md
       - helpLines: mod-desc/help-lines.md
+      - densityMapHeightTypes: mod-desc/density-map-height-types.md
+      - materialTemplates: mod-desc/material-templates.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

@@ -33,6 +33,8 @@ XML-блоки с примерами. Только разметка, без ск
     - [inputBinding](mod-desc/input-binding.md) — привязки по умолчанию для действий: `<actionBinding><binding device/input/…>`; дефолт первого запуска.
     - [fillTypes](mod-desc/fill-types.md) — типы груза/наполнения: ссылка на внешний файл `<map>` с `<fillType>`; глобальный реестр `FillType.<ИМЯ>`.
     - [helpLines](mod-desc/help-lines.md) — страницы помощи: `<category>`/`<page>`/`<paragraph>` во вкладке «Помощь»; дополняют базовые.
+    - [densityMapHeightTypes](mod-desc/density-map-height-types.md) — типы насыпных материалов (кучи на земле); внешний файл, привязка к fillType; условие высыпания.
+    - [materialTemplates](mod-desc/material-templates.md) — шаблоны материалов/цветов магазина (FS25): `colorScale` sRGB + PBR, наследование `parentTemplate`.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).

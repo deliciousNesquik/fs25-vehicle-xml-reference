@@ -50,6 +50,8 @@ docs/
 - [inputBinding](docs/mod-desc/input-binding.md) — привязки по умолчанию: `<actionBinding action><binding input/device/index/axisComponent/inputComponent/neutralInput>`; комбо через пробел; приоритет у конфига игрока.
 - [fillTypes](docs/mod-desc/fill-types.md) — типы груза/наполнения: `<fillTypes filename>` → внешний `<map>` с `<fillType>` (physics/economy/image/pallet/textures); глобальное UPPER-имя, мод может переопределить базовый тип.
 - [helpLines](docs/mod-desc/help-lines.md) — страницы помощи: `<category>`→`<page>`→`<paragraph>` (`<title>`/`<text>`/`<image>`); во вкладке «Помощь», дополняют базовые, видны после загрузки карты.
+- [densityMapHeightTypes](docs/mod-desc/density-map-height-types.md) — типы насыпных материалов (кучи на земле): `<densityMapHeightTypes filename>` → внешний файл с `<densityMapHeightType fillTypeName …>`; глобально, условие `getCanTipToGround`.
+- [materialTemplates](docs/mod-desc/material-templates.md) — шаблоны материалов/цветов магазина (FS25): `<template name/title/colorScale/PBR/parentTemplate>`; ссылка `materialTemplateName` в конфигурациях цвета; имя мода неймспейсится.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
