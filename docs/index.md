@@ -28,6 +28,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [jointTypes](mod-desc/joint-types.md) — типы сцепок навески: глобальный реестр имён; стыковка attacherJoint ↔ inputAttacherJoint.
     - [storeItems](mod-desc/store-items.md) — товары мода в магазине: ссылки на XML предметов; данные магазина в `<storeData>` файла.
     - [storeCategories](mod-desc/store-categories.md) — кастомные категории магазина (только DLC); `name`/`title`/`image`/`type`/`insertAfter`.
+    - [brands](mod-desc/brands.md) — бренды/производители: `name`/`title`/`image`/`imageOffset`; глобальный реестр, у всех модов.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).
