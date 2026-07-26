@@ -31,6 +31,8 @@ XML-блоки с примерами. Только разметка, без ск
     - [brands](mod-desc/brands.md) — бренды/производители: `name`/`title`/`image`/`imageOffset`; глобальный реестр, у всех модов.
     - [actions](mod-desc/actions.md) — регистрация действий ввода: `<action name/axisType/category/…>`; глобальное имя `InputAction.<name>`.
     - [inputBinding](mod-desc/input-binding.md) — привязки по умолчанию для действий: `<actionBinding><binding device/input/…>`; дефолт первого запуска.
+    - [fillTypes](mod-desc/fill-types.md) — типы груза/наполнения: ссылка на внешний файл `<map>` с `<fillType>`; глобальный реестр `FillType.<ИМЯ>`.
+    - [helpLines](mod-desc/help-lines.md) — страницы помощи: `<category>`/`<page>`/`<paragraph>` во вкладке «Помощь»; дополняют базовые.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).

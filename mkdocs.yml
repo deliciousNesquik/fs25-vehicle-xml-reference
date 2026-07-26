@@ -60,6 +60,8 @@ nav:
       - brands: mod-desc/brands.md
       - actions: mod-desc/actions.md
       - inputBinding: mod-desc/input-binding.md
+      - fillTypes: mod-desc/fill-types.md
+      - helpLines: mod-desc/help-lines.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
