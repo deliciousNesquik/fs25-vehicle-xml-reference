@@ -46,6 +46,8 @@ docs/
 - [storeItems](docs/mod-desc/store-items.md) — товары мода в магазине: `<storeItem xmlFilename=>` ссылается на файл предмета; вся витрина — в `<storeData>` файла; вид по `<species>`.
 - [storeCategories](docs/mod-desc/store-categories.md) — кастомные категории магазина: `<storeCategory name/title/image/type/insertAfter>`; читается ТОЛЬКО у DLC, обычный мод — скриптом; типы VEHICLE/TOOL/PLACEABLE/OBJECT.
 - [brands](docs/mod-desc/brands.md) — бренды/производители: `<brand name/title/image/imageOffset>`; глобальный реестр по имени (заглавные+`_`), у всех модов; ссылка через `storeData.brand`, fallback LIZARD.
+- [actions](docs/mod-desc/actions.md) — регистрация действий ввода: `<action name/axisType/category/displayCategory/ignoreComboMask>`; глобальное имя, `InputAction.<name>`, имя действия в меню — `input_<name>`.
+- [inputBinding](docs/mod-desc/input-binding.md) — привязки по умолчанию: `<actionBinding action><binding input/device/index/axisComponent/inputComponent/neutralInput>`; комбо через пробел; приоритет у конфига игрока.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

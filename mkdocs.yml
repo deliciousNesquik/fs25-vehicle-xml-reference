@@ -58,6 +58,8 @@ nav:
       - storeItems: mod-desc/store-items.md
       - storeCategories: mod-desc/store-categories.md
       - brands: mod-desc/brands.md
+      - actions: mod-desc/actions.md
+      - inputBinding: mod-desc/input-binding.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
