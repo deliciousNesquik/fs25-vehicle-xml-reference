@@ -68,6 +68,8 @@ nav:
       - bales: mod-desc/bales.md
       - missionVehicles: mod-desc/mission-vehicles.md
       - maps: mod-desc/maps.md
+      - materialHolders: mod-desc/material-holders.md
+      - consumables: mod-desc/consumables.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md

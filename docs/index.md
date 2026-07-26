@@ -39,6 +39,8 @@ XML-блоки с примерами. Только разметка, без ск
     - [bales](mod-desc/bales.md) — типы тюков: внешний `<bale>` файл (i3d/размер/грузы/обмотка); подбор баллером по грузу+форме+размеру.
     - [missionVehicles](mod-desc/mission-vehicles.md) — пул техники для контрактов: внешний `<mission type>`→`<group>`→`<vehicle>`; аренда на миссию, только добавление.
     - [maps](mod-desc/maps.md) — играбельные карты мода: `id`/`configFilename`/`default*`/`<title>`/`<iconFilename>`; появляются в выборе карты.
+    - [materialHolders](mod-desc/material-holders.md) — держатели материалов: i3d, грузится ради регистрации именованных материалов в общий реестр.
+    - [consumables](mod-desc/consumables.md) — расходники (FS25): плёнка/сетка обмотки; надстройка над fillUnit, вариации, расход+пополнение.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).

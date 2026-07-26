@@ -56,6 +56,8 @@ docs/
 - [bales](docs/mod-desc/bales.md) — типы тюков: `<bale filename>` → внешний `<bale>` (i3d/`<size>`/`<fillTypes>`/обмотка); подбор по грузу+форме+размеру; рантайм-объект, не товар; глобальный реестр (мод-первый, глоб-фолбэк).
 - [missionVehicles](docs/mod-desc/mission-vehicles.md) — пул техники контрактов: `<missionVehicles filename>` → внешний файл `<mission type>`→`<group size/rewardScale/variant>`→`<vehicle filename>` (товар магазина); типы harvest/sow/plow/…/mow_bale/transport(+stonePick FS25); только ДОБАВЛЕНИЕ, аренда на миссию.
 - [maps](docs/mod-desc/maps.md) — играбельные карты: `<map id/configFilename/default{Vehicles,Placeables,Items,HandTools}XMLFilename/filename/className>` + `<title>`/`<description>`/`<iconFilename>`; регистрируется в g_mapManager, экран выбора карты; id неймспейсится, filename/className дефолт Mission00.
+- [materialHolders](docs/mod-desc/material-holders.md) — держатели материалов: `<materialHolder filename>` → i3d; грузится ради регистрации именованных материалов (onCreate-узлы) в g_materialManager; ссылка по имени/тройке; глобально, last-write-wins.
+- [consumables](docs/mod-desc/consumables.md) — расходники (FS25-only): `<consumable xmlFilename>` → файл вариаций (root `<consumable>`/`<consumableVariation type/name/price/…>`); надстройка над fillUnit (обмотка тюков), расход при работе + пополнение за деньги; g_consumableManager, вариации неймспейсятся.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
