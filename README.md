@@ -54,6 +54,8 @@ docs/
 - [materialTemplates](docs/mod-desc/material-templates.md) — шаблоны материалов/цветов магазина (FS25): `<template name/title/colorScale/PBR/parentTemplate>`; ссылка `materialTemplateName` в конфигурациях цвета; имя мода неймспейсится.
 - [connectionHoses](docs/mod-desc/connection-hoses.md) — типы шлангов трактор↔орудие: `<connectionHose xmlFilename>` → внешний файл (`basicHoses`/`connectionHoseTypes`+adapter/material/`sockets`); техника ссылается по имени (`<hose>` орудие, `<target>` трактор).
 - [bales](docs/mod-desc/bales.md) — типы тюков: `<bale filename>` → внешний `<bale>` (i3d/`<size>`/`<fillTypes>`/обмотка); подбор по грузу+форме+размеру; рантайм-объект, не товар; глобальный реестр (мод-первый, глоб-фолбэк).
+- [missionVehicles](docs/mod-desc/mission-vehicles.md) — пул техники контрактов: `<missionVehicles filename>` → внешний файл `<mission type>`→`<group size/rewardScale/variant>`→`<vehicle filename>` (товар магазина); типы harvest/sow/plow/…/mow_bale/transport(+stonePick FS25); только ДОБАВЛЕНИЕ, аренда на миссию.
+- [maps](docs/mod-desc/maps.md) — играбельные карты: `<map id/configFilename/default{Vehicles,Placeables,Items,HandTools}XMLFilename/filename/className>` + `<title>`/`<description>`/`<iconFilename>`; регистрируется в g_mapManager, экран выбора карты; id неймспейсится, filename/className дефолт Mission00.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).

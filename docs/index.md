@@ -37,6 +37,8 @@ XML-блоки с примерами. Только разметка, без ск
     - [materialTemplates](mod-desc/material-templates.md) — шаблоны материалов/цветов магазина (FS25): `colorScale` sRGB + PBR, наследование `parentTemplate`.
     - [connectionHoses](mod-desc/connection-hoses.md) — типы шлангов трактор↔орудие: внешний файл (basicHoses/connectionHoseTypes/sockets); ссылка по имени.
     - [bales](mod-desc/bales.md) — типы тюков: внешний `<bale>` файл (i3d/размер/грузы/обмотка); подбор баллером по грузу+форме+размеру.
+    - [missionVehicles](mod-desc/mission-vehicles.md) — пул техники для контрактов: внешний `<mission type>`→`<group>`→`<vehicle>`; аренда на миссию, только добавление.
+    - [maps](mod-desc/maps.md) — играбельные карты мода: `id`/`configFilename`/`default*`/`<title>`/`<iconFilename>`; появляются в выборе карты.
 - **Base** — общие блоки любой техники.
     - [typeDesc](base/type-desc.md) — название типа техники в магазине (ключ локализации).
     - [filename](base/filename.md) — путь к `.i3d` (3D-модель).

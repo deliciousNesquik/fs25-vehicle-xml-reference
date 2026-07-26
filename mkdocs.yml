@@ -66,6 +66,8 @@ nav:
       - materialTemplates: mod-desc/material-templates.md
       - connectionHoses: mod-desc/connection-hoses.md
       - bales: mod-desc/bales.md
+      - missionVehicles: mod-desc/mission-vehicles.md
+      - maps: mod-desc/maps.md
   - Base:
       - typeDesc: base/type-desc.md
       - filename: base/filename.md
