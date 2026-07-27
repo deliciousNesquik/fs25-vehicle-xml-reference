@@ -46,7 +46,6 @@ nav:
       - specializations: mod-desc/specializations.md
       - extraSourceFiles: mod-desc/extra-source-files.md
       - dependencies: mod-desc/dependencies.md
-      - parentFile: mod-desc/parent-file.md
       - isSelectable: mod-desc/is-selectable.md
       - uniqueType: mod-desc/unique-type.md
       - vehicleTypes: mod-desc/vehicle-types.md
@@ -90,3 +89,4 @@ nav:
   - Concepts:
       - Объявление XML: concepts/xml-declaration.md
       - CDATA: concepts/cdata.md
+      - parentFile (наследование XML): concepts/parent-file.md

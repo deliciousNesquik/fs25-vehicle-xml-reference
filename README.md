@@ -34,7 +34,7 @@ docs/
 - [specializations](docs/mod-desc/specializations.md) — регистрация кастомных спеков техники: `name`/`className`/`filename`; неймспейс `<modName>.<name>`.
 - [extraSourceFiles](docs/mod-desc/extra-source-files.md) — глобальные Lua-скрипты (`sourceFile#filename`), грузятся при загрузке мода по порядку.
 - [dependencies](docs/mod-desc/dependencies.md) — требуемые моды (имя без `.zip`); проверка включённости, блокирует старт; НЕ порядок загрузки.
-- [parentFile](docs/mod-desc/parent-file.md) — наследование XML: `xmlFilename` родитель + `set`/`remove`/`clearList`; общий механизм движка (чаще в конфигах техники).
+- parentFile — наследование XML (общий механизм движка); перенесён в Concepts → [parentFile](docs/concepts/parent-file.md).
 - [isSelectable](docs/mod-desc/is-selectable.md) — виден/выбираем ли мод в меню (по умолчанию `true`); `false` — служебные/зависимые моды.
 - [uniqueType](docs/mod-desc/unique-type.md) — тег взаимоисключения: моды с одинаковым тегом нельзя включить вместе (диалог-своп).
 - [vehicleTypes](docs/mod-desc/vehicle-types.md) — кастомные типы техники: `parent` + `<specialization>`; ссылка через `type=` в vehicle.xml.
@@ -81,6 +81,7 @@ docs/
 ### Concepts — сквозные темы
 - [Объявление XML](docs/concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла: version, encoding, standalone.
 - [CDATA](docs/concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста (спецсимволы, многострочный текст).
+- [parentFile](docs/concepts/parent-file.md) — наследование XML: родитель + `set`/`remove`/`clearList`; свои элементы дочернего файла отбрасываются (`XMLFile:initInheritance`); чаще в конфигах техники.
 
 _Разделы пополняются по мере добавления блоков._
 

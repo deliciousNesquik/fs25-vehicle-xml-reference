@@ -17,7 +17,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [specializations](mod-desc/specializations.md) — регистрация кастомных спеков (Lua) техники.
     - [extraSourceFiles](mod-desc/extra-source-files.md) — подключение глобальных Lua-скриптов при загрузке мода.
     - [dependencies](mod-desc/dependencies.md) — требуемые моды (должны быть включены; не порядок загрузки).
-    - [parentFile](mod-desc/parent-file.md) — наследование XML: родитель как основа + правки (общий механизм движка).
+    - parentFile — наследование XML (общий механизм движка); документирован в Concepts → [parentFile](concepts/parent-file.md).
     - [isSelectable](mod-desc/is-selectable.md) — виден/выбираем ли мод в списке (по умолчанию да).
     - [uniqueType](mod-desc/unique-type.md) — тег взаимного исключения модов (один включённый на тег).
     - [vehicleTypes](mod-desc/vehicle-types.md) — кастомные типы техники (набор спек); пара к specializations.
@@ -61,5 +61,6 @@ XML-блоки с примерами. Только разметка, без ск
 - **Concepts** — сквозные темы.
     - [Объявление XML](concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла.
     - [CDATA](concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста.
+    - [parentFile](concepts/parent-file.md) — наследование XML: родитель + правки `set`/`remove`/`clearList`; свои элементы ребёнка отбрасываются.
 
 Лицензия: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
