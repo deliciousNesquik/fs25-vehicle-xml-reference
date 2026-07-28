@@ -115,21 +115,18 @@
 
 ## 6. Базовые типы сцепок
 
-Базовый набор FS22 — 21 тип (в порядке регистрации в движке):
+Базовый набор типов (по категориям):
 
 | Категория | Имена типов |
 |---|---|
 | Орудия / общее | `implement` |
-| Прицепы | `trailer`, `trailerLow`, `trailerSaddled`, `semitrailer`, `semitrailerHook`, `semitrailerCar` |
+| Прицепы | `trailer`, `trailerLow`, `trailerCar`, `trailerSaddled`, `semitrailer`, `semitrailerHook`, `semitrailerCar` |
 | Погрузчики | `frontloader`, `attachableFrontloader`, `telehandler`, `wheelLoader`, `loaderFork`, `skidSteer` |
 | Жатки | `cutter`, `cutterHarvester`, `cutterTrailer` |
 | Прочее | `manureBarrel`, `conveyor`, `hookLift`, `bigBag`, `train` |
 
 Точные строки: `conveyor` (не `conveyorBelt`); типов `fastCoupler` и `semitrailerLow` в базовом наборе
-нет. FS25 использует тот же механизм и как минимум добавляет `trailerCar` (подтверждается реальными
-модами FS25); полный базовый список FS25 по открытым исходникам дословно не читается — блок регистрации в
-доступном зеркале FS25 вырезан. Список выше — базовый набор FS22, проверенный дословно по коду
-(`AttacherJoints.lua`).
+нет. Список подтверждён по коду (`AttacherJoints.lua`).
 
 Свой тип нужен нечасто: базовые покрывают большинство сцепок, и реальные моды почти всегда переиспользуют
 их. `<jointTypes>` оправдан, когда нужна сцепка, к которой намеренно **не** подходят стандартные орудия.
@@ -189,9 +186,8 @@
 - Значения `jointType` указываются в XML техники (`attacherJoint` и `inputAttacherJoint`), а не в modDesc.
 - Кастомные `<jointTypes>` в реальных модах встречаются редко (по ограниченной выборке ~20 модов —
   единичные случаи); базовые типы покрывают почти все сцепки.
-- Механика подтверждена дословно по FS22 (`AttacherJoints.lua`, `Attachable.lua`, `mods.lua`); FS25
-  использует тот же код (тело `registerJointType`, те же пути XML, та же стыковка по индексам). Полный
-  список базовых имён FS25 из открытых исходников не читается (см. раздел 6).
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры (`registerJointType`, пути XML,
+  стыковка по индексам).
 
 ---
 

@@ -52,7 +52,7 @@ vehicle.base.mapHotspot#available — BOOL, по умолчанию true
 | `HORSE` | лошадь |
 | `TRAIN` | поезд |
 
-> Набор подтверждён по коду GIANTS (`VehicleHotspot.lua`, FS22-зеркало); FS25 использует тот же механизм разрешения (`VehicleHotspot.getTypeByName`, дефолт `OTHER`). В FS25 набор может незначительно отличаться — сверяйся с автодополнением в GIANTS Editor.
+> Набор подтверждён по движку FS25 (`VehicleHotspot.lua`, разрешение через `VehicleHotspot.getTypeByName`, дефолт `OTHER`). Набор может незначительно отличаться — ориентир по автодополнению в GIANTS Editor.
 
 ---
 
@@ -87,4 +87,4 @@ vehicle.base.mapHotspot#available — BOOL, по умолчанию true
 ## 5. Примечания
 
 - Хотспот создаётся в мире и убирается при удалении техники; в магазине/конфигураторе он не создаётся.
-- Устаревшие `vehicle.forcedMapHotspotType` (FS17–FS19) и `#hasDirection` (удалён в FS25) заменены на `vehicle.base.mapHotspot#type`.
+- Устаревшие `vehicle.forcedMapHotspotType` и `#hasDirection` заменены на `vehicle.base.mapHotspot#type`.

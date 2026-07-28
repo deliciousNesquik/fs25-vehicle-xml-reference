@@ -122,7 +122,7 @@ vehicle.foldable.foldingConfigurations.foldingConfiguration(?)   — конфи�
 | `unfoldWarning` / `detachWarning` | L10N | — | Предупреждения при заблокированном действии. |
 | окна-лимиты `loweringMin/Max`, `turnOnFoldMin/Max`, `attaching/detachingMin/Max`, `toggleCoverMin/Max`, `dynamicMountMin/Max`, `crabSteeringMin/Max`, `loadMovingToolStatesMin/Max` | FLOAT | `0`/`1` | Окна допустимости соответствующих действий по `foldAnimTime`. |
 
-**FS25 добавил:** `foldWhileDetach` (BOOL, `false`), `allowControlWhileFolding` (BOOL, `true`).
+Дополнительно: `foldWhileDetach` (BOOL, `false`), `allowControlWhileFolding` (BOOL, `true`).
 
 ---
 
@@ -143,7 +143,7 @@ vehicle.foldable.foldingConfigurations.foldingConfiguration(?)   — конфи�
 | `aiSkipDelay` | BOOL | `false` | AI двигает все части синхронно, без задержек. |
 
 Часть ссылается **либо** на `animationName`, **либо** на `rootNode`+`animationClip` (иначе отклоняется).
-Несколько `foldingPart` делят один `foldAnimTime`. **FS25 добавил** `skipDelayOnReverse` (BOOL, `true`).
+Несколько `foldingPart` делят один `foldAnimTime`. Атрибут `skipDelayOnReverse` (BOOL, `true`).
 
 ---
 
@@ -220,9 +220,9 @@ vehicle.foldable.foldingConfigurations.foldingConfiguration(?)   — конфи�
   `foldMinLimit`/`foldMaxLimit` относительно него.
 - Тип конфигурации — `folding`; несколько `foldingPart` делят один таймлайн.
 - Смысл «разложено» задаёт `turnOnFoldDirection` (не сам знак animTime).
-- Механика подтверждена по исходникам FS22 `vehicles/specializations/Foldable.lua`. **В FS25 файл —
-  полный исходник (не заглушка), совпадает с FS22**; отличия FS25: `foldWhileDetach`,
-  `allowControlWhileFolding` (на `<foldingParts>`), `skipDelayOnReverse` (на `<foldingPart>`).
+- Поведение — по движку FS25 (`vehicles/specializations/Foldable.lua`); дополнительные атрибуты:
+  `foldWhileDetach`, `allowControlWhileFolding` (на `<foldingParts>`), `skipDelayOnReverse`
+  (на `<foldingPart>`).
 
 ---
 

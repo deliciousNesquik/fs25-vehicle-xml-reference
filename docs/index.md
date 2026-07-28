@@ -52,7 +52,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [components](base/components.md) — тела, шарниры, столкновения.
     - [i3dMappings](base/i3d-mappings.md) — алиасы узлов i3d (ссылки по имени).
     - [Материалы и покраска](base/materials-paint.md) — `<baseMaterial>`/`<material>`, `colorMatN` (RGB + индекс краски), дефолтные типы покраски.
-    - [baseMaterialConfigurations](base/base-material-configurations.md) — выбор цвета в магазине (FS22): цвета + подписка материалов на `colorMatN`.
+    - [baseMaterialConfigurations](base/base-material-configurations.md) — выбор цвета в магазине (устаревшая форма): цвета + подписка материалов на `colorMatN`.
 - **Specializations** — блоки по спецификациям.
     - [foldable](specializations/foldable.md) — складывание крыльев/частей: `foldAnimTime`, `foldingParts`, гейтинг `foldMinLimit/foldMaxLimit`.
     - [cultivator](specializations/cultivator.md) — обработка почвы (культиватор/лущильник): `useDeepMode`, звук, связка с `<workArea type=cultivator>`.

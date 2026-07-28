@@ -11,13 +11,14 @@
 </baseMaterialConfigurations>
 ```
 
-Блок выбора **основного цвета** техники в магазине (FS19/FS22-стиль). Содержит список выбираемых цветов
+Блок выбора **основного цвета** техники в магазине (устаревшая форма). Содержит список выбираемых цветов
 (`<baseMaterialConfiguration>`) и список материалов-подписчиков (`<material>`), которым выбранный цвет
 записывается в указанный `colorMatN`.
 
 > Расположение: блок техники `<vehicle.baseMaterialConfigurations>`. Раздел справочника — Base.
 >
-> Это форма FS22. В FS25 аналог — `<baseColorConfigurations>` с `materialTemplateName` (раздел 6).
+> Устаревший блок: движок FS25 ремапит его на `<designColorConfigurations>`; актуальная форма —
+> `baseColorConfigurations` + `materialTemplateName` (раздел 5).
 
 ---
 
@@ -37,7 +38,8 @@
 | `useDefaultColors` | BOOL[^bool] | `false` | `true` — добавить к перечисленным ещё и **сток-палитру** игры (`g_vehicleColors`); `false` — показывать **только** перечисленные цвета. |
 | `defaultColorIndex` | INT | — | Индекс предвыбранного/бесплатного цвета (`isDefault`, цена `0`). |
 
-В FS22 у контейнера **нет** `title` и `defaultColorMaterialTemplateName` (последний — только FS25).
+У этой формы контейнера **нет** `title`; `defaultColorMaterialTemplateName` относится к
+`baseColorConfigurations`.
 
 ---
 
@@ -75,46 +77,29 @@ RGB.
 
 ## 5. Аналогичные блоки
 
-- **FS22:** `baseMaterialConfigurations`, `designMaterialConfigurations`, `designMaterial2Configurations`,
-  `designMaterial3Configurations`, а также `baseColorConfigurations` (тип `baseColor`) и
-  `rimColorConfigurations` (тип `rimColor`).
-- **FS25:** `baseColorConfigurations`, `designColorConfigurations`, `designColor2…designColor16Configurations`,
+- `baseColorConfigurations`, `designColorConfigurations`, `designColor2…designColor16Configurations`,
   `rimColor` — все через класс `VehicleConfigurationItemColor` и шаблоны материалов.
 
 ---
 
-## 6. FS22 vs FS25
-
-- **FS22 (эта форма):** `<baseMaterialConfiguration>` = RGB + индекс краски (`material`); `<material>` =
-  подписка на `colorMatN`. Обрабатывается спекой `BaseMaterial`.
-- **FS25:** блок `<baseMaterialConfigurations>` **устаревший** — движок ремапит его на
-  `designColorConfigurations`. Актуальные блоки — `<baseColorConfigurations>` /
-  `<designColorConfigurations>` c `<baseColorConfiguration materialTemplateName= color=>` и списком
-  `<material materialSlotName=>`; красится `colorScale` из шаблона (не `colorMatN`/индекс). Здесь
-  `useDefaultColors="true"` дополнительно добавляет брендовые цвета **и свободный RGB-пикер** автоматически.
-
----
-
-## 7. Типичные ошибки
+## 6. Типичные ошибки
 
 - **Нет списка `<material>`** — цвета выбираются, но красить нечего (не заданы подписчики каналов).
 - **`name` в `<material>` не совпадает** с логическим именем из `<baseMaterial>` — материал не найдётся.
 - **Расчёт, что `useDefaultColors="false"` добавит сток-палитру** — наоборот, `false` показывает только
   перечисленные цвета.
-- **`baseMaterialConfigurations` в FS25** — устарел; использовать `baseColorConfigurations` +
-  `materialTemplateName`.
+- **Этот блок устаревший** — использовать `baseColorConfigurations` + `materialTemplateName`.
 
 ---
 
-## 8. Примечания
+## 7. Примечания
 
 - Контейнер: `price`/`useDefaultColors`/`defaultColorIndex`. Элементы: `<baseMaterialConfiguration>` (цвет
   + индекс краски) и `<material>` (подписка i3d-материала на `colorMatN`).
 - `material` цвета → 4-й компонент `colorMatN` (финиш); `color` → RGB.
 - Материал может подписаться на несколько каналов (несколько `<material>` с одним `name`).
-- Форма FS22; в FS25 — `baseColorConfigurations` + шаблоны материалов (`colorScale`).
-- Механика подтверждена по исходникам FS22 (`BaseMaterial.lua`, `ConfigurationUtil.lua`) и FS25
-  (`VehicleConfigurationItemColor.lua`).
+- Устаревшая форма; актуальная — `baseColorConfigurations` + шаблоны материалов (`colorScale`).
+- Поведение — по движку FS25.
 
 ---
 

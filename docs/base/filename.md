@@ -66,7 +66,7 @@ vehicle.base.filename — STRING, по умолчанию nil
 ## 5. Примечания
 
 - Соседний файл `.i3d.shapes` (геометрия) должен лежать рядом с `.i3d` — он подгружается автоматически.
-- Устаревшая форма `vehicle.filename` (FS17–FS19) переносится в `vehicle.base.filename`.
+- Устаревшая форма `vehicle.filename` переносится в `vehicle.base.filename`.
 
 ---
 

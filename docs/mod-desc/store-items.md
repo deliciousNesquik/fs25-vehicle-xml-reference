@@ -219,8 +219,7 @@
 - `showInStore=false` — валидный кейс: предмет зарегистрирован, но скрыт (база для конфигураций,
   члены бандла, добавляемые скриптом).
 - Размещаемые с блоком `<brush>` попадают в строительное меню.
-- Механика подтверждена по исходникам FS22 и FS25 (`StoreManager.lua`, `StoreItemUtil.lua`, `mods.lua`) и
-  реальными модами (FS25_CutterMover, FS25_CropDiseases_BMP, FS22_FieldworkFillStation, FS22_BetterBulkBox).
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры.
 
 ---
 

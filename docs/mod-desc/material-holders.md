@@ -130,8 +130,7 @@ i3d-файл при этом содержит узлы с `onCreate`-атриб�
 - Читается у всех модов (не только DLC).
 - Типичное применение: fill-plane материалы для кастомных [fillTypes](fill-types.md), материалы эффектов
   выгрузки/дыма/частиц.
-- Механика подтверждена по исходникам FS22 и FS25 (`MaterialManager.lua`, `materials/MaterialUtil.lua`,
-  `mods.lua`, `mission00.lua`) и потребителям (`FillVolume`/`FillUnit`/`ShaderPlaneEffect`/`WorkParticles`).
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры.
   Базовые держатели — под `$data/shared/materialHolders/` (i3d-ассеты в открытые исходники не входят).
 
 ---

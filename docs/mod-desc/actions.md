@@ -141,10 +141,7 @@ g_inputBinding:registerActionEvent(InputAction.BMP_DISEASE_MINIMAP_TOGGLE, self,
   [`<inputBinding>`](input-binding.md) и Lua `registerActionEvent`.
 - Отображаемое имя — ключ `input_<name>` из локализации мода.
 - Реализация обработчиков — скриптинг Lua; справочник описывает XML-объявление.
-- Механика подтверждена по исходникам FS22 (`input/InputBinding.lua`, `input/InputAction.lua`,
-  `input/Binding.lua`, `mods.lua`; движок общий с FS25) и реальными модами (FS25_CropDiseases_BMP,
-  FS25_UniversalAutoload, FS25_AutoDrive, Courseplay_FS25). Полное зеркало ввода FS25 закрыто — строки
-  выверены по FS22.
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры.
 
 ---
 

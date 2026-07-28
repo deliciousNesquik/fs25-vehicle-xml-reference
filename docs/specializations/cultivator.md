@@ -50,8 +50,8 @@
 | `.onlyActiveWhenLowered#value` | BOOL | `true` | Обрабатывать только когда орудие опущено (`getIsLowered`). |
 | `.sounds.work(?)` | звук | — | Рабочий звук (раздел 4). Индексируемый: `work`, `work(1)`, … |
 
-**Только FS25:** `…workMode#useDeepMode` (BOOL) — переопределение deep/melko **на выбранный рабочий
-режим** (переключается в игре через спеку WorkMode). В FS22 `useDeepMode` фиксирован при загрузке.
+`…workMode#useDeepMode` (BOOL) — переопределение deep/melko **на выбранный рабочий
+режим** (переключается в игре через спеку WorkMode).
 
 Устаревшее: `directionNode#index` → `#node`.
 
@@ -107,8 +107,7 @@
   т.е. ожидается уже обработанная поверхность.
 - Это **не** subsoiler (тот — отдельный `isSubsoiler`); `useDeepMode` лишь выбирает движковый вызов и
   набор AI-типов почвы.
-- **Переключаемость:** FS22 — фиксировано при загрузке; **FS25 — можно на рабочий режим** через
-  `workMode#useDeepMode` (переключается в игре).
+- **Переключаемость:** режим можно менять через `workMode#useDeepMode` (переключается в игре).
 
 ---
 
@@ -187,10 +186,7 @@
   (`updateCultivatorArea`).
 - `eraseTireTrack` выполняется всегда; `updateSubsoilerArea` — только при `isSubsoiler`.
 - Активация автоматическая (опущено + скорость); сетевого состояния у спеки нет.
-- Механика подтверждена по исходникам FS22 `vehicles/specializations/Cultivator.lua` и `SoundManager`.
-  **FS25 — полный исходник**; XML-схема самого `<cultivator>` идентична FS22, кроме FS25-переключения
-  `workMode#useDeepMode` (и внутренних отличий: `processVineCultivatorArea`, `loadWorkModeFromXML`,
-  `onWorkModeChanged`).
+- Поведение — по движку FS25 (`vehicles/specializations/Cultivator.lua`, `SoundManager`).
 
 ---
 

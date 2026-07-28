@@ -10,8 +10,8 @@
 ```
 
 Задаёт покраску частей техники: привязывает логический материал к материалу i3d и записывает в него
-параметр шейдера цвета. В FS22 цвет несёт параметр `colorMatN` (VEC4: RGB + индекс типа краски); в FS25
-эта система заменена **шаблонами материалов** (`colorScale` + PBR, см. раздел 5).
+параметр шейдера цвета. В устаревшей форме цвет несёт параметр `colorMatN` (VEC4: RGB + индекс типа
+краски); актуальная система — **шаблоны материалов** (`colorScale` + PBR, см. раздел 5).
 
 > Расположение: блок техники `<vehicle.baseMaterial>`. Раздел справочника — Base.
 
@@ -82,27 +82,25 @@
 
 Покраска в магазине идёт через типы конфигураций цвета:
 
-| Тип (FS22) | Что красит | XML-блок |
+| Тип (устаревший) | Что красит | XML-блок |
 |---|---|---|
 | `baseMaterial` (= baseColor) | основной цвет | `vehicle.baseMaterialConfigurations` |
 | `designMaterial` / `designMaterial2` / `designMaterial3` | дизайн-цвета | `vehicle.designMaterial…Configurations` |
 | `rimColor` | диски/колёса | `vehicle.rimColorConfigurations` |
 
-В FS25 типы: `baseColor`, `designColor`, `designColor2…designColor16`, `rimColor`, `wrappingColor` (обмотка
+Актуальные типы: `baseColor`, `designColor`, `designColor2…designColor16`, `rimColor`, `wrappingColor` (обмотка
 тюков); диски — через `rimMaterialTemplateName` у `WheelVisual`. См. [`<baseMaterialConfigurations>`](base-material-configurations.md).
 
 ---
 
-## 5. FS22 vs FS25 — важное различие
+## 5. Шаблоны материалов — актуальная система
 
-- **FS22:** покраска — `colorMatN` (RGB + индекс типа краски). `<baseMaterial>`/`<material>` и
-  `baseMaterialConfigurations` — рабочие.
-- **FS25:** система заменена **шаблонами материалов** (`materialTemplate`): красится параметр `colorScale`
-  (RGB) + PBR-параметры `smoothnessScale`/`metalnessScale`/`clearCoatSmoothness`/`clearCoatIntensity`/
-  `porosity` из шаблона (`data/shared/brandMaterialTemplates.xml`), применяется по `materialSlotName`.
-  Финиш кодируется значениями шаблона, а не целым индексом. Блок `<baseMaterial>` в FS25 **устаревший** —
-  движок выдаёт предупреждения и ремапит его на систему `designColorConfigurations`/шаблонов. См.
-  [`<materialTemplates>`](../mod-desc/material-templates.md).
+Покраска идёт через **шаблоны материалов** (`materialTemplate`): красится параметр `colorScale`
+(RGB) + PBR-параметры `smoothnessScale`/`metalnessScale`/`clearCoatSmoothness`/`clearCoatIntensity`/
+`porosity` из шаблона (`data/shared/brandMaterialTemplates.xml`), применяется по `materialSlotName`.
+Финиш кодируется значениями шаблона, а не целым индексом. Блок `<baseMaterial>` **устаревший** —
+движок выдаёт предупреждения и ремапит его на систему `designColorConfigurations`/шаблонов. См.
+[`<materialTemplates>`](../mod-desc/material-templates.md).
 
 ---
 
@@ -114,7 +112,7 @@
 - **Финиш задан 4-м числом в `value` без `material`** — перекрывается запечённым `w`; использовать
   атрибут `material`.
 - **Меш не реагирует на цвет** — у его материала i3d не объявлен нужный `colorMatN` (задаётся в редакторе).
-- **Расчёт на `<baseMaterial>` в FS25** — устарел; там шаблоны материалов (`colorScale`).
+- **Расчёт на `<baseMaterial>`** — устаревший блок; актуальны шаблоны материалов (`colorScale`).
 
 ---
 
@@ -124,9 +122,8 @@
   (`vehicle.baseMaterialConfigurations`).
 - `colorMatN` — VEC4: RGB + индекс типа краски (`value[4]`); слоты `colorMat0..3` (базовый/дизайн/декали/доп).
 - Один `<material>` перекрашивает все вхождения материала-образца по технике.
-- FS25 заменил `colorMatN`/индекс на шаблоны материалов (`colorScale` + PBR), `<baseMaterial>` устарел.
-- Механика подтверждена по исходникам FS22 (`MaterialUtil.lua`, `BaseMaterial.lua`, `BrandColorManager.lua`,
-  `ConfigurationUtil.lua`) и FS25 (`VehicleMaterial.lua`, `VehicleConfigurationItemColor.lua`).
+- Актуальная система — шаблоны материалов (`colorScale` + PBR); `<baseMaterial>` устаревший.
+- Поведение — по движку FS25.
 
 ---
 

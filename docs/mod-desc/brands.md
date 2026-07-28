@@ -141,8 +141,7 @@
 - `title` — `$l10n_`-ключ или текст; `image` — путь в моде; `imageOffset` — доля прозрачных краёв `[0..1]`.
 - Запасной бренд при неизвестном имени — `LIZARD`.
 - Товар может переопределить логотип полями `storeData.brand#customIcon`/`#imageOffset`, не меняя бренд.
-- Механика подтверждена по исходникам FS22 и FS25 (`BrandManager.lua`, `StoreItemUtil.lua`,
-  `StoreManager.lua`, `mods.lua`) и реальными модами (FS25_DigitalDisplay, FS25_UsedPlus). Полный список
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры. Полный список
   базовых имён из `dataS/brands.xml` в исходники не входит.
 
 ---

@@ -98,7 +98,7 @@
 
 Вложенные элементы `<input>`: `<animationNodes>`, элементы смены объектов (`objectChange`).
 
-> Устаревшие атрибуты (FS22): `color` → `materialTemplateName`, `decalColor` → `decalMaterialTemplateName`.
+> Устаревшие атрибуты: `color` → `materialTemplateName`, `decalColor` → `decalMaterialTemplateName`.
 > Атрибута `defaultOutputPtoName` не существует — сопоставление идёт по `ptoName`.
 
 ---

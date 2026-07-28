@@ -168,10 +168,8 @@
 - modDesc только ссылается на файл(ы); определение — во внешнем `<bale>`-файле, он же — объект в мире.
 - Подбор по (тип груза, форма, размер); поиск сначала своего мода, потом глобально.
 - Тюки — рантайм-объекты, не store items.
-- FS25 добавил `<variations>`, `materialName`/`alphaMaterialName`, `baleMesh#isAlphaMesh` (механизм
-  подключения тот же, что в FS22).
-- Механика подтверждена по исходникам FS22 и FS25 (`BaleManager.lua`, `objects/Bale.lua`, `Baler.lua`,
-  `mods.lua`) и реальным модом (FS25_zLiftablePalletsBales). Базовые тюки задаются картой
+- Поддерживаются `<variations>`, `materialName`/`alphaMaterialName`, `baleMesh#isAlphaMesh`.
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры. Базовые тюки задаются картой
   (`map.bales#filename`); базовые файлы данных в открытые исходники не входят.
 
 ---

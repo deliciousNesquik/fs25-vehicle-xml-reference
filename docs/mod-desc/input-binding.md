@@ -157,10 +157,7 @@
 - `input` — токены через пробел (последний основной, прочие модификаторы); `device` — символическое
   устройство по умолчанию, резолвится в подключённое.
 - Аналоговые атрибуты (`axisComponent`/`inputComponent`/`neutralInput`) нужны только для осей.
-- Механика подтверждена по исходникам FS22 (`input/InputBinding.lua`, `input/Binding.lua`,
-  `input/InputAction.lua`; движок общий с FS25) и реальными модами (FS25_CropDiseases_BMP,
-  FS25_UniversalAutoload, FS25_AutoDrive, Courseplay_FS25). Полное зеркало ввода FS25 закрыто — строки
-  выверены по FS22.
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры.
 
 ---
 

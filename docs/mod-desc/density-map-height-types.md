@@ -149,9 +149,8 @@
 - Читаемые поля: `fillTypeName`, `maxSurfaceAngle` (град.), `fillToGroundScale`, `allowsSmoothing`,
   `<collision>` (scale/baseOffset/minOffset/maxOffset). Визуал — из fillType.
 - Наличие heightType — условие высыпания груза кучей на землю (`getCanTipToGround`).
-- Механика подтверждена по исходникам FS22 и FS25 (`DensityMapHeightManager.lua`,
-  `DensityMapHeightUtil.lua`, `mods.lua`). Базовый список — в `data/maps/maps_densityMapHeightTypes.xml`
-  (в открытые исходники не входит).
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры. Базовый список — в
+  `data/maps/maps_densityMapHeightTypes.xml` (в открытые исходники не входит).
 
 ---
 

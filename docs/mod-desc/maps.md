@@ -93,9 +93,9 @@
 
 ## 7. `default*XMLFilename` — стартовый контент новой игры
 
-`defaultVehiclesXMLFilename` / `defaultPlaceablesXMLFilename` / `defaultItemsXMLFilename` (и в FS25 —
-`defaultHandToolsXMLFilename`) задают, что стоит на карте при **создании новой игры**. Они применяются
-только для нового сейва (существующий сейв грузит своё сохранённое состояние). В FS22 первые три
+`defaultVehiclesXMLFilename` / `defaultPlaceablesXMLFilename` / `defaultItemsXMLFilename` /
+`defaultHandToolsXMLFilename` задают, что стоит на карте при **создании новой игры**. Они применяются
+только для нового сейва (существующий сейв грузит своё сохранённое состояние). Первые три
 **обязательны**.
 
 ---
@@ -127,8 +127,7 @@
 
 ## 9. Типичные ошибки
 
-- **Нет `id` / `<title>` / `<iconFilename>` / любого из трёх `default*XMLFilename`** — карта отбраковывается
-  (в FS22 это жёсткая ошибка).
+- **Нет `id` / `<title>` / `<iconFilename>` / любого из трёх `default*XMLFilename`** — карта отбраковывается.
 - **Пустой/неверный `configFilename`** — играть будет нечем (при игре грузится именно он); хотя жёсткой
   проверки на пустоту нет.
 - **Повторный `id`** — вторая карта с тем же id игнорируется с предупреждением.
@@ -144,11 +143,10 @@
 - `<maps>` регистрирует карту в `g_mapManager`; она появляется в экране выбора карты (новая игра).
 - `id` мода неймспейсится (`<modName>.<id>`); `configFilename` — конфиг карты, грузится при игре.
 - `filename`/`className` необязательны (дефолт `Mission00`/`FSBaseMission`); нужны только для своей логики.
-- `default*XMLFilename` — стартовый контент только для новой игры; FS25 добавил `defaultHandToolsXMLFilename`.
+- `default*XMLFilename` — стартовый контент только для новой игры (включая `defaultHandToolsXMLFilename`).
 - `<title>`/`<description>`/`<iconFilename>` локализуемы (языковая модель — та же, что у
   [`<title>`](title.md)/[`<description>`](description.md) мода).
-- Механика подтверждена по исходникам FS22 (`MapManager.lua`, `mission00.lua`, `MapSelectionScreen.lua`,
-  `mods.lua`; движок общий с FS25). `defaultHandToolsXMLFilename` — из схемы FS25 (в FS22 отсутствует).
+- Поведение — по официальной схеме FS25 (`modDesc.xsd`) и движку игры.
   Базовые карты — в `dataS/maps.xml` (в открытые исходники не входит; подтверждён id `MapUS`).
 
 ---

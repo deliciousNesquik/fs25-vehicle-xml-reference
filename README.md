@@ -40,7 +40,7 @@ docs/
 - [vehicleTypes](docs/mod-desc/vehicle-types.md) — кастомные типы техники: `parent` + `<specialization>`; ссылка через `type=` в vehicle.xml.
 - [placeableSpecializations](docs/mod-desc/placeable-specializations.md) — регистрация кастомных спеков размещаемых объектов: `name`/`className`/`filename`; класс `Placeable`, общий с техникой механизм.
 - [placeableTypes](docs/mod-desc/placeable-types.md) — кастомные типы размещаемых объектов: `parent="simplePlaceable"` + `<specialization>`; ссылка через `type=` в placeable.xml.
-- [handToolSpecializations](docs/mod-desc/handtool-specializations.md) — регистрация спеков ручных инструментов (класс `HandTool`); механизм новый в FS25.
+- [handToolSpecializations](docs/mod-desc/handtool-specializations.md) — регистрация спеков ручных инструментов (класс `HandTool`).
 - [handToolTypes](docs/mod-desc/handtool-types.md) — кастомные типы ручных инструментов: `parent` + `<specialization>`; корень `<handTool type=>`; 9 базовых спек.
 - [jointTypes](docs/mod-desc/joint-types.md) — типы сцепок навески: `<jointType name=>`; глобальный реестр (без неймспейса), стыковка по совпадению имени attacherJoint ↔ inputAttacherJoint.
 - [storeItems](docs/mod-desc/store-items.md) — товары мода в магазине: `<storeItem xmlFilename=>` ссылается на файл предмета; вся витрина — в `<storeData>` файла; вид по `<species>`.
@@ -57,8 +57,8 @@ docs/
 - [missionVehicles](docs/mod-desc/mission-vehicles.md) — пул техники контрактов: `<missionVehicles filename>` → внешний файл `<mission type>`→`<group size/rewardScale/variant>`→`<vehicle filename>` (товар магазина); типы harvest/sow/plow/…/mow_bale/transport(+stonePick FS25); только ДОБАВЛЕНИЕ, аренда на миссию.
 - [maps](docs/mod-desc/maps.md) — играбельные карты: `<map id/configFilename/default{Vehicles,Placeables,Items,HandTools}XMLFilename/filename/className>` + `<title>`/`<description>`/`<iconFilename>`; регистрируется в g_mapManager, экран выбора карты; id неймспейсится, filename/className дефолт Mission00.
 - [materialHolders](docs/mod-desc/material-holders.md) — держатели материалов: `<materialHolder filename>` → i3d; грузится ради регистрации именованных материалов (onCreate-узлы) в g_materialManager; ссылка по имени/тройке; глобально, last-write-wins.
-- [consumables](docs/mod-desc/consumables.md) — расходники (FS25-only): `<consumable xmlFilename>` → файл вариаций (root `<consumable>`/`<consumableVariation type/name/price/…>`); надстройка над fillUnit (обмотка тюков), расход при работе + пополнение за деньги; g_consumableManager, вариации неймспейсятся.
-- [wildlife](docs/mod-desc/wildlife.md) — дикая фауна: `<wildlife><species filename>` (НЕ `<wildlife filename>`); амбиентные животные/птицы (WildlifeSpawner: companionAnimal/lightWildlife); modDesc-путь FS25-new (в FS22 — карта map.wildlife#filename); схема файла вида FS25 публично не подтверждена.
+- [consumables](docs/mod-desc/consumables.md) — расходники: `<consumable xmlFilename>` → файл вариаций (root `<consumable>`/`<consumableVariation type/name/price/…>`); надстройка над fillUnit (обмотка тюков), расход при работе + пополнение за деньги; g_consumableManager, вариации неймспейсятся.
+- [wildlife](docs/mod-desc/wildlife.md) — дикая фауна: `<wildlife><species filename>` (НЕ `<wildlife filename>`); амбиентные животные/птицы (WildlifeSpawner: companionAnimal/lightWildlife); регистрация через modDesc списком `<species filename>`; схема файла вида публично не подтверждена.
 
 ### Base — общие блоки любой техники
 - [typeDesc](docs/base/type-desc.md) — название типа техники в магазине (ключ локализации).
@@ -69,8 +69,8 @@ docs/
 - [mapHotspot](docs/base/map-hotspot.md) — значок на карте.
 - [components](docs/base/components.md) — тела, шарниры, столкновения.
 - [i3dMappings](docs/base/i3d-mappings.md) — алиасы узлов i3d (ссылки на ноды по имени).
-- [Материалы и покраска](docs/base/materials-paint.md) — `<baseMaterial>`/`<material>`/`<shaderParameter>`; `colorMatN` = VEC4 (RGB + индекс типа краски); дефолтные типы (base/design/design2/rim); FS22 colorMatN vs FS25 шаблоны (`colorScale`).
-- [baseMaterialConfigurations](docs/base/base-material-configurations.md) — выбор основного цвета в магазине (FS22): `<baseMaterialConfiguration color/material>` + подписка `<material name shaderParameter>` на `colorMatN`; FS25 → `baseColorConfigurations` + `materialTemplateName`.
+- [Материалы и покраска](docs/base/materials-paint.md) — `<baseMaterial>`/`<material>`/`<shaderParameter>`; `colorMatN` = VEC4 (RGB + индекс типа краски); дефолтные типы (base/design/design2/rim); устаревший `colorMatN` и актуальные шаблоны материалов (`colorScale`).
+- [baseMaterialConfigurations](docs/base/base-material-configurations.md) — выбор основного цвета в магазине (устаревшая форма): `<baseMaterialConfiguration color/material>` + подписка `<material name shaderParameter>` на `colorMatN`; актуально — `baseColorConfigurations` + `materialTemplateName`.
 
 ### Specializations — блоки по спецификациям
 - [foldable](docs/specializations/foldable.md) — складывание частей/крыльев: `foldingConfigurations`/`foldingParts`/`foldingPart`, состояние `foldAnimTime` 0..1, гейтинг других спек через `foldMinLimit`/`foldMaxLimit`; складные крылья (ЛДГ и т.п.).
@@ -86,7 +86,7 @@ docs/
 - [Объявление XML](docs/concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла: version, encoding, standalone.
 - [CDATA](docs/concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста (спецсимволы, многострочный текст).
 - [parentFile](docs/concepts/parent-file.md) — наследование XML: родитель + `set`/`remove`/`clearList`; свои элементы дочернего файла отбрасываются (`XMLFile:initInheritance`); чаще в конфигах техники.
-- [Кастомная покраска (скрипт)](docs/concepts/custom-paint-script.md) — как добавить покраску спекой: механизм `colorScale`(FS25)/`colorMat0`(FS22), обход материалов, сохранение, MP-событие; полный исходник `CustomPaint.lua` + modDesc. Когда достаточно XML (`useDefaultColors="true"`) — тоже указано.
+- [Кастомная покраска (скрипт)](docs/concepts/custom-paint-script.md) — как добавить покраску спекой: механизм `colorScale`, обход материалов, сохранение, MP-событие; полный исходник `CustomPaint.lua` + modDesc. Когда достаточно XML (`useDefaultColors="true"`) — тоже указано.
 
 _Разделы пополняются по мере добавления блоков._
 

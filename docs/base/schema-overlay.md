@@ -45,7 +45,7 @@
 | `COMBINE_HEADER` | жатка |
 | `FRONTLOADER` | фронтальный погрузчик |
 
-> Набор подтверждён по коду GIANTS (`VehicleSchemaOverlayData.lua`, FS22-зеркало); в FS25 подтверждён путь/атрибут (`$dataS/vehicleSchemaOverlays.xml`). Сам файл может содержать дополнительные имена — сверяйся с автодополнением в GIANTS Editor.
+> Набор подтверждён по движку FS25 (`VehicleSchemaOverlayData.lua`, путь/атрибут `$dataS/vehicleSchemaOverlays.xml`). Сам файл может содержать дополнительные имена — ориентир по автодополнению в GIANTS Editor.
 
 `attacherJointPosition` — координаты точки сцепки в 2D-диаграмме (не мировые координаты), `basePosition` — положение корпуса (по умолчанию совпадает с точкой сцепки).
 
@@ -78,4 +78,4 @@
 ## 5. Примечания
 
 - Конкретные допустимые имена силуэтов задаются данными игры (`$dataS/vehicleSchemaOverlays.xml`), а не жёстко в коде.
-- Устаревшие формы FS17–FS22 (`#file`, `#width`, `#height`, под-элементы `default/turnedOn/selected`) заменены на единый `schemaOverlay#name`.
+- Устаревшие формы (`#file`, `#width`, `#height`, под-элементы `default/turnedOn/selected`) заменены на единый `schemaOverlay#name`.

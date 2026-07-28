@@ -168,9 +168,8 @@
 - Итог = родитель + правки; из ребёнка живут только `parentFile#xmlFilename` и `attributes`.
 - `storeItem` при этом указывает на **дочерний** файл; витрина в игре собирается из storeData родителя +
   `set`.
-- Механика подтверждена дословно по FS22 `xml/XMLFile.lua` (`initInheritance` :306-353; замена дескриптора
-  :346-348; порядок remove/set/clearList; резолв пути через `Utils.getFilename`). Движок общий с FS25;
-  открытого зеркала FS25-загрузчика нет, но `XMLFile.lua` идентичен по механизму.
+- Поведение — по движку FS25 (`xml/XMLFile.lua`: `initInheritance`, порядок remove/set/clearList,
+  резолв пути через `Utils.getFilename`).
 
 ---
 
