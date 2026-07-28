@@ -52,6 +52,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [components](base/components.md) — тела, шарниры, столкновения.
     - [i3dMappings](base/i3d-mappings.md) — алиасы узлов i3d (ссылки по имени).
 - **Specializations** — блоки по спецификациям.
+    - [foldable](specializations/foldable.md) — складывание крыльев/частей: `foldAnimTime`, `foldingParts`, гейтинг `foldMinLimit/foldMaxLimit`.
     - [ai](specializations/ai.md) — настройки автопомощника (наёмного работника).
     - [licensePlates](specializations/license-plates.md) — точки крепления номерных знаков.
     - [powerTakeOffs](specializations/power-take-offs.md) — валы отбора мощности (ВОМ): выход и вход.

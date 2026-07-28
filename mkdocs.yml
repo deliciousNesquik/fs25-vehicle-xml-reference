@@ -80,6 +80,7 @@ nav:
       - components: base/components.md
       - i3dMappings: base/i3d-mappings.md
   - Specializations:
+      - foldable: specializations/foldable.md
       - ai: specializations/ai.md
       - licensePlates: specializations/license-plates.md
       - powerTakeOffs: specializations/power-take-offs.md
