@@ -72,6 +72,7 @@ docs/
 
 ### Specializations — блоки по спецификациям
 - [foldable](docs/specializations/foldable.md) — складывание частей/крыльев: `foldingConfigurations`/`foldingParts`/`foldingPart`, состояние `foldAnimTime` 0..1, гейтинг других спек через `foldMinLimit`/`foldMaxLimit`; складные крылья (ЛДГ и т.п.).
+- [cultivator](docs/specializations/cultivator.md) — обработка почвы: `#useDeepMode` (культиватор vs дисковый лущильник), `#isSubsoiler`/`#isPowerHarrow`, `directionNode`, `sounds.work`; геометрия — через `<workArea type=cultivator>`; активация авто (опущено+движется). Прямо под пак ЛДГ.
 - [ai](docs/specializations/ai.md) — настройки автопомощника: габариты для навигатора, рулевые колёса, обнаружение препятствий, развороты.
 - [licensePlates](docs/specializations/license-plates.md) — точки крепления номерных знаков: узлы, тип, позиция, область размещения.
 - [powerTakeOffs](docs/specializations/power-take-offs.md) — валы отбора мощности (ВОМ): выход (трактор), вход (орудие), модель вала.
