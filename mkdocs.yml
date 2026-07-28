@@ -80,7 +80,7 @@ nav:
       - components: base/components.md
       - i3dMappings: base/i3d-mappings.md
       - Материалы и покраска: base/materials-paint.md
-      - baseMaterialConfigurations: base/base-material-configurations.md
+      - baseColorConfigurations: base/base-color-configurations.md
   - Specializations:
       - foldable: specializations/foldable.md
       - cultivator: specializations/cultivator.md

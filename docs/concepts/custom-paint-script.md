@@ -110,7 +110,7 @@
 --   * Сохранение — saveToXMLFile + схема на Vehicle.xmlSchemaSavegame.
 --   * MP — onReadStream/onWriteStream (join) + CustomPaintSetColorEvent (рантайм).
 --
--- Для фиксированных цветов магазина скрипт НЕ нужен: <colorConfigurations
+-- Для фиксированных цветов магазина скрипт НЕ нужен: <baseColorConfigurations
 -- useDefaultColors="true"> даёт брендовые цвета + свободный RGB-пикер сам.
 --
 
@@ -372,11 +372,11 @@ end
 
 - Для фиксированной палитры магазина скрипт не нужен (`useDefaultColors="true"` даёт брендовые цвета +
   свободный RGB-пикер). Скрипт — для рантайм-покраски.
-- Красится параметр `colorScale`. Некоторые устаревшие материалы вместо него имеют `colorMat0`
-  (7-арг `setShaderParameter`, без завершающего индекса материала).
+- Красится параметр шейдера `colorScale` (`x,y,z` = цвет sRGB, `w` = тип финиша); тот же параметр, что
+  пишут шаблоны материалов.
 - Имена функций сверены по движку FS25 (`VehicleMaterial`, `ConfigurationUtil`, событие по
   образцу базовых Event-классов); исходник — рабочая заготовка, проверять на своей сборке по `log.txt`.
 - Если в логе появляются предупреждения `colorScale` на неокрашиваемых мешах — задать белый список слотов
   через блок `<customPaint><material materialSlotName=.../>`.
-- Связано: [материалы и покраска](../base/materials-paint.md), [`<baseMaterialConfigurations>`](../base/base-material-configurations.md),
+- Связано: [материалы и покраска](../base/materials-paint.md), [`<baseColorConfigurations>`](../base/base-color-configurations.md),
   [specializations](../mod-desc/specializations.md), [inputBinding](../mod-desc/input-binding.md).

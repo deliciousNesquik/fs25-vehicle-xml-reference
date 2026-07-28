@@ -51,8 +51,8 @@ XML-блоки с примерами. Только разметка, без ск
     - [mapHotspot](base/map-hotspot.md) — значок на карте.
     - [components](base/components.md) — тела, шарниры, столкновения.
     - [i3dMappings](base/i3d-mappings.md) — алиасы узлов i3d (ссылки по имени).
-    - [Материалы и покраска](base/materials-paint.md) — `<baseMaterial>`/`<material>`, `colorMatN` (RGB + индекс краски), дефолтные типы покраски.
-    - [baseMaterialConfigurations](base/base-material-configurations.md) — выбор цвета в магазине (устаревшая форма): цвета + подписка материалов на `colorMatN`.
+    - [Материалы и покраска](base/materials-paint.md) — шаблоны материалов (`colorScale` sRGB + PBR), применение по `materialSlotName`, типы конфигураций цвета.
+    - [baseColorConfigurations](base/base-color-configurations.md) — выбор основного цвета в магазине: `<baseColorConfiguration>` (шаблон/RGB) + подписка `<material materialSlotName>`.
 - **Specializations** — блоки по спецификациям.
     - [foldable](specializations/foldable.md) — складывание крыльев/частей: `foldAnimTime`, `foldingParts`, гейтинг `foldMinLimit/foldMaxLimit`.
     - [cultivator](specializations/cultivator.md) — обработка почвы (культиватор/лущильник): `useDeepMode`, звук, связка с `<workArea type=cultivator>`.
@@ -66,6 +66,6 @@ XML-блоки с примерами. Только разметка, без ск
     - [Объявление XML](concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла.
     - [CDATA](concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста.
     - [parentFile](concepts/parent-file.md) — наследование XML: родитель + правки `set`/`remove`/`clearList`; свои элементы ребёнка отбрасываются.
-    - [Кастомная покраска (скрипт)](concepts/custom-paint-script.md) — спека для рантайм-покраски: `colorScale`/`colorMat0`, сохранение, MP, полный исходник.
+    - [Кастомная покраска (скрипт)](concepts/custom-paint-script.md) — спека для рантайм-покраски: параметр `colorScale`, сохранение, MP, полный исходник.
 
 Лицензия: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

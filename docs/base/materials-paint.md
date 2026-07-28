@@ -1,135 +1,149 @@
 # Farming Simulator 2025
-## Материалы и покраска: `<baseMaterial>` / `<material>`
+## Материалы и покраска: шаблоны материалов
 
 ```xml
-<baseMaterial>
-    <material name="Harrow_mat" baseNode="1>0">
-        <shaderParameter name="colorMat0" value="0.07 0.28 0.18" material="6"/>
-    </material>
-</baseMaterial>
+<!-- modDesc: свой шаблон материала (регистрируется в общий реестр) -->
+<materialTemplates>
+    <template name="myBrandGreen" parentTemplate="calibratedPaint" title="$l10n_color_green"
+              colorScale="0.07 0.28 0.18" smoothnessScale="0.6" metalnessScale="0"
+              clearCoatSmoothness="0" clearCoatIntensity="0" porosity="0"/>
+</materialTemplates>
 ```
 
-Задаёт покраску частей техники: привязывает логический материал к материалу i3d и записывает в него
-параметр шейдера цвета. В устаревшей форме цвет несёт параметр `colorMatN` (VEC4: RGB + индекс типа
-краски); актуальная система — **шаблоны материалов** (`colorScale` + PBR, см. раздел 5).
+Покраска техники в FS25 идёт через **шаблоны материалов** (`materialTemplate`). Шаблон задаёт цвет
+(`colorScale`, sRGB) и PBR-финиш (гладкость/металличность/лак/пористость), а к геометрии он применяется по
+**имени слота материала** (`materialSlotName`) i3d. Выбор конкретного шаблона в магазине описывается
+блоками конфигурации цвета (`<baseColorConfigurations>` и родственные, см. раздел 5).
 
-> Расположение: блок техники `<vehicle.baseMaterial>`. Раздел справочника — Base.
+> Расположение: реестр шаблонов — `data/shared/brandMaterialTemplates.xml`; свои шаблоны мод добавляет
+> через [`<materialTemplates>`](../mod-desc/material-templates.md) в `modDesc`. Раздел справочника — Base.
 
 ---
 
-## 1. `<baseMaterial>` и `<material>`
+## 1. Как устроена покраска
 
-Путь — `vehicle.baseMaterial.material(?)`. Каждый `<material>` описывает один окрашиваемый материал:
+Три части системы:
+
+1. **Шаблон материала** (`<template>`) — именованный набор «цвет + финиш» (раздел 2).
+2. **Применение к мешу** — движок (`VehicleMaterial`) находит SHAPE-узлы с нужным `materialSlotName` и
+   пишет параметры шейдера из шаблона (раздел 3–4).
+3. **Выбор в магазине** — блоки `<...ColorConfigurations>` предлагают список шаблонов/цветов и через
+   `<material>` привязывают выбранное к слотам (раздел 5).
+
+Ни один шаг не использует старые `colorMatN`/`<baseMaterial>` — они удалены из FS25 (раздел 7).
+
+---
+
+## 2. Шаблон материала (`<template>`)
+
+Реестр `templates` (`data/shared/brandMaterialTemplates.xml` + `defaultMaterialTemplates`); свои шаблоны
+добавляются `<materialTemplates>` в `modDesc` (имя неймспейсится префиксом мода). Поля `<template>`:
 
 | Атрибут | Тип | Описание |
 |---|---|---|
-| `name` | STRING[^string] | Логическое имя материала (валидное индекс-имя). Используется как ссылка из блоков конфигурации цвета. Может **не совпадать** с внутренним именем материала i3d. |
-| `baseNode` | NODE[^node] | Узел-образец (путь вида `1>0` = компонент 1, ребёнок 0). Должен быть SHAPE. Движок берёт `getMaterial(baseNode, 0)` — этот материал i3d и будет патчиться. |
+| `name` | STRING[^string] | Имя шаблона (реестр хранит в верхнем регистре; у модов — с префиксом окружения). |
+| `parentTemplate` | STRING | Родительский шаблон; незаданные поля наследуются от него. Нерезолвленный родитель — предупреждение и пропуск. |
+| `title` | L10N[^l10n] | Отображаемое имя цвета в магазине. |
+| `brand` | STRING | Идентификатор бренда шаблона. |
+| `colorScale` | VEC3[^vec3] | **Цвет (sRGB)**, 3 компонента. |
+| `smoothnessScale` | FLOAT[^float] | Гладкость. |
+| `metalnessScale` | FLOAT | Металличность. |
+| `clearCoatSmoothness` | FLOAT | Гладкость лака (clear coat). |
+| `clearCoatIntensity` | FLOAT | Интенсивность лака. |
+| `porosity` | FLOAT | Пористость. |
+| `detailDiffuse` / `detailNormal` / `detailSpecular` | STRING | Детальные текстуры (заданы здесь или у родителя). |
+| `colorScan#filename` + `#channelR/G/B/Smoothness/Metalness` | — | Калибровочные данные DCC. |
+| `usage` / `category` / `iconFilename` | — | Метаданные для инструментов. |
 
-Внутри — один или несколько `<shaderParameter>` (без него запись отклоняется):
+Наследование через `parentTemplate`: поле, не заданное в шаблоне, берётся из родителя; если и там нет —
+жёсткий дефолт (`colorScale` → `1 1 1`, `smoothnessScale`/`metalnessScale` → `1`, лак/пористость → `0`,
+детальные текстуры → библиотека `data/shared/detailLibrary/nonMetallic/default_*`).
 
-| Атрибут | Тип | Описание |
+---
+
+## 3. Как шаблон ложится на меш (`materialSlotName`)
+
+`VehicleMaterial:apply(node, targetMaterialSlotName)` обходит дерево SHAPE-узлов; для каждого перебирает
+материалы (`getNumOfMaterials`) и сверяет `getMaterialSlotName(node, i)` с целевым именем слота. Материал
+патчится, **только если имя слота совпадает** с `targetMaterialSlotName` (или цель не задана — тогда все
+материалы узла).
+
+Из этого следует: какие детали красятся каким цветом — определяется **именем слота материала**, заданным
+в i3d при моделировании (GIANTS Editor). Свободных «каналов» вроде старых `colorMat0..3` нет — привязка
+идёт по стабильному строковому имени слота.
+
+---
+
+## 4. Параметры шейдера покраски
+
+`VehicleMaterial:applyToMaterial` пишет параметры шейдера из шаблона (`setShaderParameter`) в таком
+порядке:
+
+| Параметр шейдера | Из поля шаблона | Смысл |
 |---|---|---|
-| `name` | STRING | Имя параметра шейдера (`colorMat0`, `colorMat1`…). |
-| `value` | COLOR[^color] | Цвет RGB (компоненты `value[1..3]`). |
-| `material` | INT[^int] | Индекс типа краски (`value[4]`, см. раздел 3). |
+| `colorScale` | `colorScale` (VEC3, sRGB) | Базовый цвет. |
+| `smoothnessScale` | `smoothnessScale` | Гладкость поверхности. |
+| `metalnessScale` | `metalnessScale` | Металличность. |
+| `clearCoatSmoothness` | `clearCoatSmoothness` | Гладкость лака. |
+| `clearCoatIntensity` | `clearCoatIntensity` | Интенсивность лака. |
+| `porosity` | `porosity` | Пористость. |
 
-**Применение:** движок рекурсивно обходит дерево узлов; для каждого SHAPE, чей материал совпадает с
-образцом (`getMaterial(node,0) == materialId`) и у которого есть указанный параметр шейдера, вызывает
-`setShaderParameter(node, name, r, g, b, materialIndex, false)`. То есть один `<material>` перекрашивает
-**все** вхождения этого материала i3d по технике.
-
----
-
-## 2. Пример из практики
-
-```xml
-<baseMaterial>
-    <material name="Harrow_mat" baseNode="1>0">
-        <shaderParameter name="colorMat0" value="0.07 0.28 0.18" material="6"/>
-    </material>
-</baseMaterial>
-```
-
-Здесь материал i3d, взятый с узла `1>0`, красится в RGB `(0.07, 0.28, 0.18)` с типом краски `6` через
-канал `colorMat0`.
+Дополнительно при необходимости подменяются текстуры (детальные `detail*`, базовые diffuse/normal/gloss)
+через `setMaterialCustomMapFromFile`/`setMaterial*MapFromFile`. Если у `<material>`-подписчика (раздел 5)
+стоит флаг «только цвет» — пишется лишь `colorScale`, остальной финиш остаётся из i3d.
 
 ---
 
-## 3. `colorMatN` — VEC4 и «4-й компонент»
+## 5. Типы конфигураций цвета
 
-Параметры `colorMat0`, `colorMat1`, `colorMat2`, `colorMat3` — векторы из 4 чисел:
+Выбор цвета в магазине описывается блоками, которые все загружает класс `VehicleConfigurationItemColor`:
 
-- `value[1..3]` — **RGB** (цвет, линейный 0..1);
-- `value[4]` — **целочисленный индекс типа краски** (не альфа!): выбирает финиш из массива красок
-  шейдера техники (глянец/мат/металлик/хром/пластик и т.п.). Например индексы металликов — `{2, 3, 19,
-  30, 31, 35}`.
+| Блок | Что красит |
+|---|---|
+| `baseColorConfigurations` | основной цвет |
+| `designColorConfigurations` | дизайн-цвет |
+| `designColor2Configurations` … `designColor16Configurations` | доп. дизайн-цвета (2–16) |
+| `rimColorConfigurations` | диски/колёса |
+| `wrappingColorConfigurations` | обмотка тюков |
 
-**Как задаётся 4-й компонент:** из атрибута `material` (INT), если он есть; иначе берётся текущее
-«запечённое» значение `w` с узла (из i3d); иначе `1`. Надёжный способ выбрать финиш — атрибут `material`
-(число 4-м в `value` при отсутствии `material` перекрывается запечённым `w`).
-
-**Слоты (конвенция):** `colorMat0` — основной/базовый цвет, `colorMat1` — второй/дизайн-цвет,
-`colorMat2` — декали, `colorMat3` — доп. дизайн-канал. Диски/ступицы перебирают `colorMat0..7`.
-
-**Подписка меша на канал** задаётся в i3d: материал получает цвет через `colorMatN` только если он
-объявляет этот параметр шейдера (проверка `getHasShaderParameter`). Т.е. какие детали красятся базовым
-цветом, а какие — дизайн-цветом, решается на этапе моделирования (какой `colorMatN` выставлен у материала).
-
----
-
-## 4. Дефолтные «методы» покраски (типы конфигураций)
-
-Покраска в магазине идёт через типы конфигураций цвета:
-
-| Тип (устаревший) | Что красит | XML-блок |
-|---|---|---|
-| `baseMaterial` (= baseColor) | основной цвет | `vehicle.baseMaterialConfigurations` |
-| `designMaterial` / `designMaterial2` / `designMaterial3` | дизайн-цвета | `vehicle.designMaterial…Configurations` |
-| `rimColor` | диски/колёса | `vehicle.rimColorConfigurations` |
-
-Актуальные типы: `baseColor`, `designColor`, `designColor2…designColor16`, `rimColor`, `wrappingColor` (обмотка
-тюков); диски — через `rimMaterialTemplateName` у `WheelVisual`. См. [`<baseMaterialConfigurations>`](base-material-configurations.md).
-
----
-
-## 5. Шаблоны материалов — актуальная система
-
-Покраска идёт через **шаблоны материалов** (`materialTemplate`): красится параметр `colorScale`
-(RGB) + PBR-параметры `smoothnessScale`/`metalnessScale`/`clearCoatSmoothness`/`clearCoatIntensity`/
-`porosity` из шаблона (`data/shared/brandMaterialTemplates.xml`), применяется по `materialSlotName`.
-Финиш кодируется значениями шаблона, а не целым индексом. Блок `<baseMaterial>` **устаревший** —
-движок выдаёт предупреждения и ремапит его на систему `designColorConfigurations`/шаблонов. См.
-[`<materialTemplates>`](../mod-desc/material-templates.md).
+Все они имеют одинаковую структуру: контейнер с общими атрибутами, список выбираемых цветов
+(`<...Configuration>`) и список `<material>`-подписчиков, привязывающих выбор к слотам материалов.
+Подробно — [`<baseColorConfigurations>`](base-color-configurations.md).
 
 ---
 
 ## 6. Типичные ошибки
 
-- **`baseNode` не SHAPE** — образец материала не считается; запись отклоняется.
-- **`name` = имя материала i3d** по ошибке — `name` это логическое индекс-имя (ссылка из конфигов), не
-  обязано совпадать с именем материала i3d.
-- **Финиш задан 4-м числом в `value` без `material`** — перекрывается запечённым `w`; использовать
-  атрибут `material`.
-- **Меш не реагирует на цвет** — у его материала i3d не объявлен нужный `colorMatN` (задаётся в редакторе).
-- **Расчёт на `<baseMaterial>`** — устаревший блок; актуальны шаблоны материалов (`colorScale`).
+- **Меш не красится** — у его материала в i3d не задан ожидаемый `materialSlotName`, либо имя слота не
+  совпадает с `materialSlotName`/`targetMaterialSlotName` из `<material>` (в лог — «Failed to find
+  material by material slot name»).
+- **`colorScale` в линейном пространстве** — значение задаётся в **sRGB**, не в линейном RGB.
+- **Ставка на старые блоки** — `<baseMaterial>`/`<baseMaterialConfigurations>`/`colorMatN` в FS25 удалены
+  (раздел 7); использовать шаблоны материалов и `<...ColorConfigurations>`.
+- **Незаданный `parentTemplate` при частичном шаблоне** — недостающие поля уйдут в жёсткие дефолты
+  (белый цвет, полная гладкость/металличность), а не в ожидаемый финиш.
 
 ---
 
 ## 7. Примечания
 
-- `<baseMaterial>`/`<material>` (`vehicle.baseMaterial.material`) — отдельно от блоков конфигурации цвета
-  (`vehicle.baseMaterialConfigurations`).
-- `colorMatN` — VEC4: RGB + индекс типа краски (`value[4]`); слоты `colorMat0..3` (базовый/дизайн/декали/доп).
-- Один `<material>` перекрашивает все вхождения материала-образца по технике.
-- Актуальная система — шаблоны материалов (`colorScale` + PBR); `<baseMaterial>` устаревший.
-- Поведение — по движку FS25.
+- Покраска = шаблон материала (`colorScale` sRGB + PBR: `smoothnessScale`/`metalnessScale`/
+  `clearCoatSmoothness`/`clearCoatIntensity`/`porosity`), применяемый по `materialSlotName`.
+- Привязка к геометрии — по имени слота материала i3d, а не по номерному каналу.
+- Выбор цвета в магазине — `<...ColorConfigurations>` (`VehicleConfigurationItemColor`); см.
+  [`<baseColorConfigurations>`](base-color-configurations.md).
+- Устаревшие блоки: `vehicle.baseMaterial`, `vehicle.baseMaterialConfigurations`,
+  `designMaterial…Configurations` и параметр `colorMatN` в FS25 **удалены из схемы** и лишь ремапятся
+  загрузчиком (`baseMaterialConfigurations`/`designMaterial…` → `designColorConfigurations`) с
+  предупреждением; в новых модах не применяются.
+- Поведение — по официальной схеме FS25 (`vehicle.xsd`) и движку (`VehicleMaterial`,
+  `VehicleMaterialManager`, `VehicleConfigurationItemColor`).
 
 ---
 
 ## Глоссарий
 
 [^string]: STRING — строковый тип значения. <https://en.wikipedia.org/wiki/String_(computer_science)>
-[^int]: INT — целочисленный тип. <https://en.wikipedia.org/wiki/Integer_(computer_science)>
-[^color]: COLOR — цвет RGB(A), компоненты 0..1. <https://en.wikipedia.org/wiki/RGB_color_model>
-[^node]: NODE — ссылка на узел i3d (имя i3d-маппинга или путь `компонент>ребёнок|ребёнок`). <https://en.wikipedia.org/wiki/Scene_graph>
+[^float]: FLOAT — число с плавающей точкой. <https://en.wikipedia.org/wiki/Floating-point_arithmetic>
+[^vec3]: VEC3 — вектор из трёх чисел (здесь — цвет sRGB). <https://en.wikipedia.org/wiki/Euclidean_vector>
+[^l10n]: L10N — ключ локализации (`$l10n_<ключ>`), заменяется переведённой строкой. <https://en.wikipedia.org/wiki/Internationalization_and_localization>

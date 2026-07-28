@@ -69,8 +69,8 @@ docs/
 - [mapHotspot](docs/base/map-hotspot.md) — значок на карте.
 - [components](docs/base/components.md) — тела, шарниры, столкновения.
 - [i3dMappings](docs/base/i3d-mappings.md) — алиасы узлов i3d (ссылки на ноды по имени).
-- [Материалы и покраска](docs/base/materials-paint.md) — `<baseMaterial>`/`<material>`/`<shaderParameter>`; `colorMatN` = VEC4 (RGB + индекс типа краски); дефолтные типы (base/design/design2/rim); устаревший `colorMatN` и актуальные шаблоны материалов (`colorScale`).
-- [baseMaterialConfigurations](docs/base/base-material-configurations.md) — выбор основного цвета в магазине (устаревшая форма): `<baseMaterialConfiguration color/material>` + подписка `<material name shaderParameter>` на `colorMatN`; актуально — `baseColorConfigurations` + `materialTemplateName`.
+- [Материалы и покраска](docs/base/materials-paint.md) — шаблоны материалов: `<template colorScale/smoothnessScale/metalnessScale/clearCoat…/porosity>` (цвет sRGB + PBR), применение по `materialSlotName` (`VehicleMaterial`); типы конфигураций цвета (base/design/design2…16/rim/wrapping).
+- [baseColorConfigurations](docs/base/base-color-configurations.md) — выбор основного цвета в магазине: `<baseColorConfiguration materialTemplateName/color/isDefault/price>` + подписка `<material materialSlotName/targetMaterialSlotName>`; класс `VehicleConfigurationItemColor`, `useDefaultColors` даёт брендовую палитру + RGB-пикер.
 
 ### Specializations — блоки по спецификациям
 - [foldable](docs/specializations/foldable.md) — складывание частей/крыльев: `foldingConfigurations`/`foldingParts`/`foldingPart`, состояние `foldAnimTime` 0..1, гейтинг других спек через `foldMinLimit`/`foldMaxLimit`; складные крылья (ЛДГ и т.п.).
