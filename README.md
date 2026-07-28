@@ -69,6 +69,8 @@ docs/
 - [mapHotspot](docs/base/map-hotspot.md) — значок на карте.
 - [components](docs/base/components.md) — тела, шарниры, столкновения.
 - [i3dMappings](docs/base/i3d-mappings.md) — алиасы узлов i3d (ссылки на ноды по имени).
+- [Материалы и покраска](docs/base/materials-paint.md) — `<baseMaterial>`/`<material>`/`<shaderParameter>`; `colorMatN` = VEC4 (RGB + индекс типа краски); дефолтные типы (base/design/design2/rim); FS22 colorMatN vs FS25 шаблоны (`colorScale`).
+- [baseMaterialConfigurations](docs/base/base-material-configurations.md) — выбор основного цвета в магазине (FS22): `<baseMaterialConfiguration color/material>` + подписка `<material name shaderParameter>` на `colorMatN`; FS25 → `baseColorConfigurations` + `materialTemplateName`.
 
 ### Specializations — блоки по спецификациям
 - [foldable](docs/specializations/foldable.md) — складывание частей/крыльев: `foldingConfigurations`/`foldingParts`/`foldingPart`, состояние `foldAnimTime` 0..1, гейтинг других спек через `foldMinLimit`/`foldMaxLimit`; складные крылья (ЛДГ и т.п.).
@@ -84,6 +86,7 @@ docs/
 - [Объявление XML](docs/concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла: version, encoding, standalone.
 - [CDATA](docs/concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста (спецсимволы, многострочный текст).
 - [parentFile](docs/concepts/parent-file.md) — наследование XML: родитель + `set`/`remove`/`clearList`; свои элементы дочернего файла отбрасываются (`XMLFile:initInheritance`); чаще в конфигах техники.
+- [Кастомная покраска (скрипт)](docs/concepts/custom-paint-script.md) — как добавить покраску спекой: механизм `colorScale`(FS25)/`colorMat0`(FS22), обход материалов, сохранение, MP-событие; полный исходник `CustomPaint.lua` + modDesc. Когда достаточно XML (`useDefaultColors="true"`) — тоже указано.
 
 _Разделы пополняются по мере добавления блоков._
 

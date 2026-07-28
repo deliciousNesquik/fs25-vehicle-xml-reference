@@ -79,6 +79,8 @@ nav:
       - mapHotspot: base/map-hotspot.md
       - components: base/components.md
       - i3dMappings: base/i3d-mappings.md
+      - Материалы и покраска: base/materials-paint.md
+      - baseMaterialConfigurations: base/base-material-configurations.md
   - Specializations:
       - foldable: specializations/foldable.md
       - cultivator: specializations/cultivator.md
@@ -92,3 +94,4 @@ nav:
       - Объявление XML: concepts/xml-declaration.md
       - CDATA: concepts/cdata.md
       - parentFile (наследование XML): concepts/parent-file.md
+      - Кастомная покраска (скрипт): concepts/custom-paint-script.md
