@@ -95,10 +95,10 @@
 только через `<attributes>`:
 
 ```xml
-<!-- НЕВЕРНО: как свои элементы при parentFile НЕ применяются -->
+<!-- своим элементом при parentFile не применяется -->
 <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
 
-<!-- ВЕРНО: как патчи внутри attributes -->
+<!-- эквивалент — через set внутри attributes -->
 <set path="vehicle.wearable#wearDuration"    value="480"/>
 <set path="vehicle.wearable#workMultiplier"  value="5"/>
 <set path="vehicle.wearable#fieldMultiplier" value="2"/>
