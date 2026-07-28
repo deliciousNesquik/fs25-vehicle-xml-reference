@@ -86,6 +86,7 @@ docs/
 - [Объявление XML](docs/concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла: version, encoding, standalone.
 - [CDATA](docs/concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста (спецсимволы, многострочный текст).
 - [parentFile](docs/concepts/parent-file.md) — наследование XML: родитель + `set`/`remove`/`clearList`; свои элементы дочернего файла отбрасываются (`XMLFile:initInheritance`); чаще в конфигах техники.
+- [Конфигурации техники в магазине](docs/concepts/vehicle-configurations.md) — `<...Configurations>`/`<...Configuration>` (57 типов: design/designColor/motor/wheel/fillUnit/…); общие атрибуты (`name`/`price`/`isDefault`/`isSelectable`/`saveId`), `<objectChange>` (переключение узлов `*Active`/`*Inactive`), `<configurationSets>` (комплекты по `name`+`index`); класс `VehicleConfigurationItem`.
 - [Кастомная покраска (скрипт)](docs/concepts/custom-paint-script.md) — как добавить покраску спекой: механизм `colorScale`, обход материалов, сохранение, MP-событие; полный исходник `CustomPaint.lua` + modDesc. Когда достаточно XML (`useDefaultColors="true"`) — тоже указано.
 
 _Разделы пополняются по мере добавления блоков._

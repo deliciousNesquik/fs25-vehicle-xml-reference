@@ -94,4 +94,5 @@ nav:
       - Объявление XML: concepts/xml-declaration.md
       - CDATA: concepts/cdata.md
       - parentFile (наследование XML): concepts/parent-file.md
+      - Конфигурации техники в магазине: concepts/vehicle-configurations.md
       - Кастомная покраска (скрипт): concepts/custom-paint-script.md

@@ -66,6 +66,7 @@ XML-блоки с примерами. Только разметка, без ск
     - [Объявление XML](concepts/xml-declaration.md) — строка `<?xml … ?>` в начале каждого файла.
     - [CDATA](concepts/cdata.md) — секция `<![CDATA[ … ]]>` для буквального текста.
     - [parentFile](concepts/parent-file.md) — наследование XML: родитель + правки `set`/`remove`/`clearList`; свои элементы ребёнка отбрасываются.
+    - [Конфигурации техники в магазине](concepts/vehicle-configurations.md) — `<...Configurations>`/`<...Configuration>` (design/motor/wheel/…), `<objectChange>`, `<configurationSets>`; выбираемые варианты машины.
     - [Кастомная покраска (скрипт)](concepts/custom-paint-script.md) — спека для рантайм-покраски: параметр `colorScale`, сохранение, MP, полный исходник.
 
 Лицензия: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
