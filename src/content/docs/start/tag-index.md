@@ -21,6 +21,7 @@ sidebar:
 | `<actionBinding>` | привязки одного действия внутри `<inputBinding>` | [modDesc → input-binding](../mod-desc/input-binding.md) |
 | `<actions>` | регистрация действий ввода мода | [modDesc → actions](../mod-desc/actions.md) |
 | `<ai>` | настройки автопомощника (наёмного работника) | [Спецификации → ai](../specializations/ai.md) |
+| `<alarmTrigger>` | сигнал по диапазону уровня груза | [Спецификации → fill-unit](../specializations/fill-unit.md) |
 | `<areaMarkers>` | маркеры рабочей области для ИИ | [Спецификации → ai](../specializations/ai.md) |
 | `<attributes>` | правка атрибутов элемента при наследовании | [Механизмы → parent-file](../concepts/parent-file.md) |
 | `<author>` | автор мода | [modDesc → author](../mod-desc/author.md) |
@@ -45,16 +46,23 @@ sidebar:
 | `<consumables>` | регистрация расходников мода | [modDesc → consumables](../mod-desc/consumables.md) |
 | `<consumableVariation>` | вариация расходника (плёнка, сетка) | [modDesc → consumables](../mod-desc/consumables.md) |
 | `<cultivator>` | спека обработки почвы (культиватор, лущильник) | [Спецификации → cultivator](../specializations/cultivator.md) |
+| `<deformNode>` | узел, деформирующий кучу груза | [Спецификации → fill-volume](../specializations/fill-volume.md) |
 | `<densityMapHeightType>` | тип насыпного материала во внешнем файле | [modDesc → density-map-height-types](../mod-desc/density-map-height-types.md) |
 | `<densityMapHeightTypes>` | регистрация насыпных материалов (кучи) | [modDesc → density-map-height-types](../mod-desc/density-map-height-types.md) |
 | `<dependencies>` | требуемые моды | [modDesc → dependencies](../mod-desc/dependencies.md) |
 | `<dependency>` | один требуемый мод | [modDesc → dependencies](../mod-desc/dependencies.md) |
 | `<description>` | многоязычное описание мода | [modDesc → description](../mod-desc/description.md) |
 | `<directionNode>` | узел направления обработки почвы | [Спецификации → cultivator](../specializations/cultivator.md) |
+| `<exactFillRootNode>` | узел точной заправки ёмкости | [Спецификации → fill-unit](../specializations/fill-unit.md) |
 | `<extraSourceFiles>` | глобальные Lua-скрипты мода | [modDesc → extra-source-files](../mod-desc/extra-source-files.md) |
 | `<filename>` | путь к .i3d — 3D-модели техники | [Основа → filename](../base/filename.md) |
+| `<fillPlane>` | плоскость груза, движущаяся по уровню | [Спецификации → fill-plane](../specializations/fill-plane.md) |
+| `<fillTrigger>` | скорость заправки из триггера | [Спецификации → fill-unit](../specializations/fill-unit.md) |
 | `<fillType>` | описание типа груза во внешнем файле | [modDesc → fill-types](../mod-desc/fill-types.md) |
 | `<fillTypes>` | регистрация типов груза/наполнения | [modDesc → fill-types](../mod-desc/fill-types.md) |
+| `<fillUnit>` | ёмкость: литры, типы груза, масса, HUD | [Спецификации → fill-unit](../specializations/fill-unit.md) |
+| `<fillUnits>` | контейнер ёмкостей внутри конфигурации | [Спецификации → fill-unit](../specializations/fill-unit.md) |
+| `<fillVolume>` | объёмная куча груза внутри кузова | [Спецификации → fill-volume](../specializations/fill-volume.md) |
 | `<foldable>` | спека складывания частей и крыльев | [Спецификации → foldable](../specializations/foldable.md) |
 | `<foldingConfiguration>` | один вариант складывания | [Спецификации → foldable](../specializations/foldable.md) |
 | `<foldingConfigurations>` | конфигурации складывания | [Спецификации → foldable](../specializations/foldable.md) |
@@ -64,6 +72,7 @@ sidebar:
 | `<group>` | группа техники контракта | [modDesc → mission-vehicles](../mod-desc/mission-vehicles.md) |
 | `<handToolSpecializations>` | регистрация спек ручных инструментов | [modDesc → handtool-specializations](../mod-desc/handtool-specializations.md) |
 | `<handToolTypes>` | кастомные типы ручных инструментов | [modDesc → handtool-types](../mod-desc/handtool-types.md) |
+| `<heightNode>` | узел, следящий за высотой кучи | [Спецификации → fill-volume](../specializations/fill-volume.md) |
 | `<helpLines>` | страницы помощи мода | [modDesc → help-lines](../mod-desc/help-lines.md) |
 | `<i3dMapping>` | алиас одного узла i3d | [Основа → i3d-mappings](../base/i3d-mappings.md) |
 | `<i3dMappings>` | алиасы узлов i3d (ссылки по имени) | [Основа → i3d-mappings](../base/i3d-mappings.md) |
@@ -77,6 +86,7 @@ sidebar:
 | `<l10n>` | локализация мода: строки и ключи | [modDesc → l10n](../mod-desc/l10n.md) |
 | `<licensePlate>` | одна точка крепления номерного знака | [Спецификации → license-plates](../specializations/license-plates.md) |
 | `<licensePlates>` | спека номерных знаков | [Спецификации → license-plates](../specializations/license-plates.md) |
+| `<liquidSimulation>` | плескание жидкости в ёмкости | [Спецификации → fill-unit](../specializations/fill-unit.md) |
 | `<map>` | карта мода внутри `<maps>` | [modDesc → maps](../mod-desc/maps.md) |
 | `<map>` | корень внешнего файла типов груза | [modDesc → fill-types](../mod-desc/fill-types.md) |
 | `<mapHotspot>` | значок техники на карте | [Основа → map-hotspot](../base/map-hotspot.md) |
@@ -121,6 +131,7 @@ sidebar:
 | `<uniqueType>` | тег взаимного исключения модов | [modDesc → unique-type](../mod-desc/unique-type.md) |
 | `<vehicleTypes>` | кастомные типы техники | [modDesc → vehicle-types](../mod-desc/vehicle-types.md) |
 | `<version>` | версия мода | [modDesc → version](../mod-desc/version.md) |
+| `<volume>` | один объём внутри `<fillVolume>` | [Спецификации → fill-volume](../specializations/fill-volume.md) |
 | `<washable>` | спека загрязнения и мойки | [Спецификации → washable](../specializations/washable.md) |
 | `<waterSeeding>` | требование по воде для сеялки: запрещено или обязательно | [Спецификации → water-seeding](../specializations/water-seeding.md) |
 | `<wearable>` | спека износа техники | [Спецификации → wearable](../specializations/wearable.md) |

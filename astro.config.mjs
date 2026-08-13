@@ -143,6 +143,15 @@ export default defineConfig({
 									items: ['specializations/cultivator', 'specializations/water-seeding'],
 								},
 								{
+									label: 'Груз и наполнение',
+									translations: { en: 'Cargo and filling' },
+									items: [
+										'specializations/fill-unit',
+										'specializations/fill-volume',
+										'specializations/fill-plane',
+									],
+								},
+								{
 									label: 'Подвижные части',
 									translations: { en: 'Moving parts' },
 									items: ['specializations/foldable'],
