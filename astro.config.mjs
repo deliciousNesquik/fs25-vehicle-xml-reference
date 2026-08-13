@@ -154,7 +154,12 @@ export default defineConfig({
 								{
 									label: 'Подвижные части',
 									translations: { en: 'Moving parts' },
-									items: ['specializations/foldable'],
+									items: [
+										'specializations/cylindered',
+										'specializations/moving-tools',
+										'specializations/moving-parts',
+										'specializations/foldable',
+									],
 								},
 								{
 									label: 'Навеска и передача',

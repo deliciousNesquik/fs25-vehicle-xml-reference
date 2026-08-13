@@ -37,6 +37,7 @@ sidebar:
 | `<clearList>` | очистка списка при наследовании | [Механизмы → parent-file](../concepts/parent-file.md) |
 | `<collisionPair>` | пара компонентов, не сталкивающихся друг с другом | [Основа → components](../base/components.md) |
 | `<component>` | физическое тело техники | [Основа → components](../base/components.md) |
+| `<componentJoint>` | пересчёт шарнира при движении узла | [Спецификации → cylindered](../specializations/cylindered.md) |
 | `<components>` | тела, шарниры и столкновения техники | [Основа → components](../base/components.md) |
 | `<configurationSet>` | один готовый комплект вариантов | [Механизмы → vehicle-configurations](../concepts/vehicle-configurations.md) |
 | `<configurationSets>` | комплекты конфигураций в магазине | [Механизмы → vehicle-configurations](../concepts/vehicle-configurations.md) |
@@ -45,14 +46,21 @@ sidebar:
 | `<consumable>` | ссылка на файл вариаций расходника | [modDesc → consumables](../mod-desc/consumables.md) |
 | `<consumables>` | регистрация расходников мода | [modDesc → consumables](../mod-desc/consumables.md) |
 | `<consumableVariation>` | вариация расходника (плёнка, сетка) | [modDesc → consumables](../mod-desc/consumables.md) |
+| `<controlGroup>` | группа управления подвижными узлами | [Спецификации → cylindered](../specializations/cylindered.md) |
+| `<copyLocalDirectionPart>` | копирование локального направления на узел | [Спецификации → moving-parts](../specializations/moving-parts.md) |
 | `<cultivator>` | спека обработки почвы (культиватор, лущильник) | [Спецификации → cultivator](../specializations/cultivator.md) |
+| `<cylindered>` | спека гидравлики и подвижных узлов | [Спецификации → cylindered](../specializations/cylindered.md) |
 | `<deformNode>` | узел, деформирующий кучу груза | [Спецификации → fill-volume](../specializations/fill-volume.md) |
 | `<densityMapHeightType>` | тип насыпного материала во внешнем файле | [modDesc → density-map-height-types](../mod-desc/density-map-height-types.md) |
 | `<densityMapHeightTypes>` | регистрация насыпных материалов (кучи) | [modDesc → density-map-height-types](../mod-desc/density-map-height-types.md) |
 | `<dependencies>` | требуемые моды | [modDesc → dependencies](../mod-desc/dependencies.md) |
 | `<dependency>` | один требуемый мод | [modDesc → dependencies](../mod-desc/dependencies.md) |
+| `<dependentAnimation>` | анимация по положению подвижного узла | [Спецификации → cylindered](../specializations/cylindered.md) |
+| `<dependentMovingTool>` | связь пределов одного инструмента с другим | [Спецификации → cylindered](../specializations/cylindered.md) |
+| `<dependentPart>` | зависимая часть в цепочке пересчёта | [Спецификации → cylindered](../specializations/cylindered.md) |
 | `<description>` | многоязычное описание мода | [modDesc → description](../mod-desc/description.md) |
 | `<directionNode>` | узел направления обработки почвы | [Спецификации → cultivator](../specializations/cultivator.md) |
+| `<easyArmControl>` | упрощённое управление стрелой | [Спецификации → cylindered](../specializations/cylindered.md) |
 | `<exactFillRootNode>` | узел точной заправки ёмкости | [Спецификации → fill-unit](../specializations/fill-unit.md) |
 | `<extraSourceFiles>` | глобальные Lua-скрипты мода | [modDesc → extra-source-files](../mod-desc/extra-source-files.md) |
 | `<filename>` | путь к .i3d — 3D-модели техники | [Основа → filename](../base/filename.md) |
@@ -98,8 +106,13 @@ sidebar:
 | `<mission>` | тип контракта в пуле техники | [modDesc → mission-vehicles](../mod-desc/mission-vehicles.md) |
 | `<missionVehicles>` | пул техники для контрактов | [modDesc → mission-vehicles](../mod-desc/mission-vehicles.md) |
 | `<modDesc>` | корень modDesc.xml (атрибут descVersion) | [modDesc → root](../mod-desc/root.md) |
+| `<movingPart>` | ведомый узел: шток, тяга, секция телескопа | [Спецификации → moving-parts](../specializations/moving-parts.md) |
+| `<movingParts>` | список ведомых узлов | [Спецификации → moving-parts](../specializations/moving-parts.md) |
+| `<movingTool>` | управляемый узел: поворот, ход, анимация | [Спецификации → moving-tools](../specializations/moving-tools.md) |
+| `<movingTools>` | список управляемых узлов | [Спецификации → moving-tools](../specializations/moving-tools.md) |
 | `<multiplayer>` | самодекларация MP-совместимости | [modDesc → multiplayer](../mod-desc/multiplayer.md) |
 | `<objectChange>` | переключение узлов при выборе конфигурации | [Механизмы → vehicle-configurations](../concepts/vehicle-configurations.md) |
+| `<orientationLine>` | линия выравнивания ведомого узла | [Спецификации → moving-parts](../specializations/moving-parts.md) |
 | `<output>` | выход ВОМ на стороне трактора | [Спецификации → power-take-offs](../specializations/power-take-offs.md) |
 | `<page>` | страница внутри категории помощи | [modDesc → help-lines](../mod-desc/help-lines.md) |
 | `<paragraph>` | абзац страницы помощи | [modDesc → help-lines](../mod-desc/help-lines.md) |
@@ -108,6 +121,7 @@ sidebar:
 | `<placeableTypes>` | кастомные типы размещаемых объектов | [modDesc → placeable-types](../mod-desc/placeable-types.md) |
 | `<powerTakeOffs>` | валы отбора мощности (ВОМ) | [Спецификации → power-take-offs](../specializations/power-take-offs.md) |
 | `<remove>` | удаление элемента при наследовании | [Механизмы → parent-file](../concepts/parent-file.md) |
+| `<rotation>` | поворот управляемого узла | [Спецификации → moving-tools](../specializations/moving-tools.md) |
 | `<schemaOverlay>` | силуэт техники в схеме навески | [Основа → schema-overlay](../base/schema-overlay.md) |
 | `<set>` | изменение значения при наследовании | [Механизмы → parent-file](../concepts/parent-file.md) |
 | `<size>` | габариты техники и смещения | [Основа → size](../base/size.md) |
@@ -126,6 +140,8 @@ sidebar:
 | `<template>` | шаблон материала: цвет sRGB + PBR | [Основа → materials-paint](../base/materials-paint.md) |
 | `<text>` | инлайн-строка локализации | [modDesc → l10n](../mod-desc/l10n.md) |
 | `<title>` | многоязычное название мода | [modDesc → title](../mod-desc/title.md) |
+| `<translatingPart>` | выдвигающаяся секция телескопа | [Спецификации → moving-parts](../specializations/moving-parts.md) |
+| `<translation>` | линейный ход управляемого узла | [Спецификации → moving-tools](../specializations/moving-tools.md) |
 | `<type>` | тип внутри `<vehicleTypes>` / `<placeableTypes>` / `<handToolTypes>` | [modDesc → vehicle-types](../mod-desc/vehicle-types.md) |
 | `<typeDesc>` | название типа техники в магазине | [Основа → type-desc](../base/type-desc.md) |
 | `<uniqueType>` | тег взаимного исключения модов | [modDesc → unique-type](../mod-desc/unique-type.md) |
