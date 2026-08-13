@@ -138,9 +138,9 @@ export default defineConfig({
 							translations: { en: 'Specializations' },
 							items: [
 								{
-									label: 'Обработка почвы',
-									translations: { en: 'Soil work' },
-									items: ['specializations/cultivator'],
+									label: 'Обработка почвы и посев',
+									translations: { en: 'Soil work and sowing' },
+									items: ['specializations/cultivator', 'specializations/water-seeding'],
 								},
 								{
 									label: 'Подвижные части',

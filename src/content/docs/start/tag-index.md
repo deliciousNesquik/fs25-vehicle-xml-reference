@@ -112,6 +112,7 @@ sidebar:
 | `<storeData>` | витрина предмета внутри его файла | [modDesc → store-items](../mod-desc/store-items.md) |
 | `<storeItem>` | один товар мода | [modDesc → store-items](../mod-desc/store-items.md) |
 | `<storeItems>` | товары мода в магазине | [modDesc → store-items](../mod-desc/store-items.md) |
+| `<tailwaterDepth>` | пороги затопления машины: предупреждение и поломка | [Спецификации → water-seeding](../specializations/water-seeding.md) |
 | `<template>` | шаблон материала: цвет sRGB + PBR | [Основа → materials-paint](../base/materials-paint.md) |
 | `<text>` | инлайн-строка локализации | [modDesc → l10n](../mod-desc/l10n.md) |
 | `<title>` | многоязычное название мода | [modDesc → title](../mod-desc/title.md) |
@@ -121,6 +122,7 @@ sidebar:
 | `<vehicleTypes>` | кастомные типы техники | [modDesc → vehicle-types](../mod-desc/vehicle-types.md) |
 | `<version>` | версия мода | [modDesc → version](../mod-desc/version.md) |
 | `<washable>` | спека загрязнения и мойки | [Спецификации → washable](../specializations/washable.md) |
+| `<waterSeeding>` | требование по воде для сеялки: запрещено или обязательно | [Спецификации → water-seeding](../specializations/water-seeding.md) |
 | `<wearable>` | спека износа техники | [Спецификации → wearable](../specializations/wearable.md) |
 | `<wildlife>` | дикая фауна мода | [modDesc → wildlife](../mod-desc/wildlife.md) |
 
